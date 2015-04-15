@@ -1,0 +1,367 @@
+body
+{
+background-color: #326000;
+}
+
+p
+{
+  font-family: Verdana;
+  color: #262626;
+  font-size: 14px;
+}
+
+.pagdefault {
+    height: 620px;
+    width: 960px;
+    margin: auto auto;
+    background: linear-gradient(#fff, #f3f3f3, #ffffff);
+}
+
+/* --------------------------------------------------------- */
+/* ---------------- ------- INDEX -------------------------- */
+/* --------------------------------------------------------- */
+
+#separador
+{
+  height: 2px;
+  background: #38d400;
+  width: 940px;
+  margin: 10px auto auto;
+}
+
+.listimghome li
+{
+  list-style: none;
+  margin-left: -40px;
+}
+
+.listimghome li img
+{
+  border: 2px solid #326000;
+  width: 30%;
+  float:left;
+  margin-top: 10px;
+  margin-right: 17px;
+  border-radius: 15px;
+}
+
+.titulop
+{
+  color: #449f00;
+  font-family: times, serif;
+  font-weight: bold;
+  font-size: 32px;
+}
+
+.imgsection
+{
+  width: 90%;
+  border-radius: 20px;
+}
+
+.portada
+{
+  width: 700px;
+  height: 400px;
+  margin-left: 32px;
+  padding-right: 4px;
+  float:left;
+}
+
+.section
+{
+  width: 650px;
+  height: 690px;
+  margin-left: 0px;
+  margin-right: -30px;
+  float: left;
+}
+
+.pagindex {
+    height: 1020px;
+    width: 960px;
+    margin: auto auto;
+    border-radius: 2px;
+    background: white;
+}
+
+.imgaside
+{
+  width: 105%;
+  margin-left: -10px;
+}
+
+.aside
+{
+  width: 210px;
+  height: 590px;
+  float: right;
+  margin-right: 14px;
+}
+
+.aside p
+{
+  text-align: left;
+}
+
+/* --------------------------------------------------------- */
+/* ------------------------- NOSOTROS ---------------------- */
+/* --------------------------------------------------------- */
+
+/* --------------------------------------------------------- */
+/* ------------------------- SERVICIOS --------------------- */
+/* --------------------------------------------------------- */
+
+table
+{
+  margin: auto auto;
+  margin-top: 20px;
+  border: 3px solid #125d00;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+}
+
+thead th
+{
+  border-bottom: 2px solid #116c00;
+  color:green;
+  width: 200px;
+}
+
+tbody td
+{
+  text-align: center;
+  font-family: Times new roman;
+  font-weight: bold;
+  border-right: 0px solid #116c00;
+}
+
+tfoot td
+{
+  border-top: 2px solid #116c00;
+  color:#1a8500;
+}
+
+.imgtabla
+{
+  border: 2px solid #116c00;
+  border-radius: 10px;
+  padding-left: 0px;
+  width: 150px;
+}
+
+/* --------------------------------------------------------- */
+/* ------------------------- PORTFOLIO --------------------- */
+/* --------------------------------------------------------- */
+
+.scroll
+	{
+	width:880px;
+	height:220px;
+  margin: auto auto;
+	overflow: auto;
+	border-top:2px solid #326000;
+	border-bottom:2px solid #326000;
+	border-left:2px solid #326000;
+  border-radius: 5px;
+  background-color: #c4c4c4;
+	}
+
+.tituloportfolio
+{
+  margin-left: 40px;
+  margin-top: 50px;
+
+}
+
+.listportfolio li
+{
+  margin-left: 20px;
+  list-style: none;
+}
+
+.listportfolio li img
+{
+  width: 250px;
+  float: left;
+  margin-right: 30px;
+  margin-bottom: 30px;
+  margin-left: -20px;
+  border: 2px solid #326000;
+  border-radius: 5px;
+}
+
+.pagportfolio {
+    height: 1720px;
+    width: 960px;
+    margin: auto auto;
+    background: linear-gradient(#fff, #f3f3f3, #ffffff);
+}
+
+/* --------------------------------------------------------- */
+/* ------------------------- CONTACTO ---------------------- */
+/* --------------------------------------------------------- */
+
+form
+{
+  font-weight: bold;
+  margin: 48px auto auto;
+  height: 440px;
+  width: 600px;
+  border: 3px solid #326000;
+  border-radius: 10px;
+  background-color: #d6ed93;
+  box-shadow: 0px 5px 10px #3d8e00;
+}
+
+form p
+{
+  padding-left: 30px;
+  padding-top: 10px;
+}
+
+#botonsend
+{
+  border-radius: 10px;
+  font-weight: bold;
+  width: 90px;
+  height: 25px;
+}
+
+#botonsend:hover
+{
+  color: white;
+  background-color: green;
+}
+
+/* --------------------------------------------------------- */
+/* ----------------------- HEADER -------------------------- */
+/* --------------------------------------------------------- */
+
+header
+{
+  height: 140px;
+  width: 960px;
+  margin: -18px auto auto;
+  background: linear-gradient(#d1d1d1, #fff);
+  border-radius: 2px;
+}
+
+.imgheader
+{
+  width: 12%;
+  margin-top: -60px;
+  margin-left: 40px;
+  border-radius: 130px;
+  border: 3px solid #449f00;
+  float: left;
+}
+
+.tw-ico
+{
+  float:right;
+  padding-right: 20px;
+}
+
+.fb-ico
+{
+  float:right;
+}
+
+.slogan
+{
+  font-style: italic;
+  color: #449f00;
+  text-align: right;
+  padding-right: 20px;
+  padding-top: 20px;
+  font-family: times, serif;
+  font-weight: normal;
+}
+
+/* --------------------------------------------------------- */
+/* -------------------------- NAV -------------------------- */
+/* --------------------------------------------------------- */
+
+.listanav li
+{
+  list-style: none;
+  float: left;
+  font-size: 10pt;
+  font-family: Arial;
+}
+
+.listanav li a
+{
+  font-weight: bold;
+  color: #454545;
+  border-right: 1px solid #dcdcdc;
+  text-decoration: none;
+  padding: 15px 38px;
+}
+
+.listanav li a:hover
+{
+  color: white;
+  background: #449f00;
+}
+
+#sinborde
+{
+  border-right: 0px solid black;
+}
+
+nav
+{
+  height: 50px;
+  width: 940px;
+  background: linear-gradient(#fff, #e2e2e2);
+  border-top: 1px solid #dcdcdc;
+  margin-left: 10px;
+}
+
+/* --------------------------------------------------------- */
+/* -------------------------- FOOTER ----------------------- */
+/* --------------------------------------------------------- */
+
+.imgfooter
+{
+  width: 160px;
+  margin-top: 0px;
+  border-radius: 130px;
+  border: 3px solid #449f00;
+  float:right;
+  margin-right: 15px;
+  margin-top: 18px;
+}
+
+.textofooter
+{
+  margin-top: 20px;
+  width: 750px;
+  line-height: 30%;
+  float: left;
+  color: #3e3e3e;
+  text-align: right;
+  font-size: 14px;
+}
+
+.textofooter h5
+{
+  margin-top: 75px;
+  font-size: 12px;
+  font-family: Arial;
+  text-align: center;
+}
+
+footer
+{
+  height: 200px;
+  width: 960px;
+  margin: auto auto;
+  border-top: 4px solid #326000;
+  border-radius: 2px;
+  background: linear-gradient(#c4c4c4, #fff);
+}
+
+/*---------------------------------------------------------*/
