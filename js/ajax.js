@@ -1,72 +1,4 @@
-$(document).ready(function(){
-	$("#nosotros").on("click",function(event){
-		event.preventDefault();
-		$.ajax({
-			type: "GET",
-			dataType: "html",
-			url: "home2.html",
-			success: function(data){
-				$("#conthome").html(data);
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	})
-});
-$(document).ready(function(){
-	$("#servicios").on("click",function(event){
-		event.preventDefault();
-		$.ajax({
-			type: "GET",
-			dataType: "html",
-			url: "servicios.html",
-			success: function(data){
-				$("#conthome").html(data);
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	})
-});
-$(document).ready(function(){
-	$("#postres").on("click",function(event){
-		event.preventDefault();
-		$.ajax({
-			type: "GET",
-			dataType: "html",
-			url: "postres.html",
-			success: function(data){
-				$("#cuerpo").html(data);
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	})
-});
-$(document).ready(function(){
-	$("#encargues").on("click",function(event){
-		event.preventDefault();
-		$.ajax({
-			type: "GET",
-			dataType: "html",
-			url: "encargues.html",
-			success: function(data){
-				$("#cuerpo").html(data);
-			},
-			error: function(){
-				alert("error");
-			}
-		})
-	})
-});
-
-
-
-
-/*"use strict";
+"use strict";
 
 // Solo Ejecuta Codigo cuando el DOM esta Totalmente Cargado
 $('document').ready(function(){
@@ -77,7 +9,7 @@ $('document').ready(function(){
 	contacto = 'contacto';
 
 	/* Funcion que Carga en el Contenedor Principal la
-		Seccion que se le pase como Parametro
+		Seccion que se le pase como Parametro*/
 	function cargarSeccion(seccion){
 		$.ajax({
 			type: 'GET',
@@ -127,4 +59,3 @@ $('document').ready(function(){
 		cargarSeccion(contacto);
 	});
 });
-*/

@@ -33,6 +33,51 @@
 }
 
 /*####################################################
+  ###################  SERVICIOS #####################
+  ####################################################*/
+
+table
+{
+  margin-top: 20px;
+  border: 3px solid #5ea700;
+  border-radius: 5px;
+  background: linear-gradient(to right, #dddddd, #ffffff, #dddddd);
+}
+
+thead tr td
+{
+  border-bottom: 2px solid #326000;
+  color:green;
+  width: 200px;
+  font-size: 20px;
+  text-align: center;
+  font-weight: bold;
+}
+
+tbody tr td
+{
+  margin-bottom: -10px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  border-bottom: 1px solid #326000;
+}
+
+tfoot tr td
+{
+  text-align: center;
+}
+
+.imgtabla
+{
+  border: 2px solid #326000;
+  border-radius: 10px;
+  width: 55%;
+}
+
+
+/*####################################################
   ###################  PORTFOLIO #####################
   ####################################################*/
 
@@ -43,6 +88,7 @@
 
 #ocultar2 {
   visibility: hidden;
+  vis
 }
 
 .portfolio .btn-default {
@@ -221,6 +267,7 @@ color: #fff;
   -webkit-transform: scale(1.1);
   transform: scale(1.9);
   color: white;
+  z-index: 10;
 }
 
 .hvr-grow {
@@ -236,7 +283,7 @@ color: #fff;
   transition-duration: 0.3s;
   -webkit-transition-property: transform;
   transition-property: transform;
-  z-index: 2;
+  z-index: 9;
 }
 
 .fadeIn {
