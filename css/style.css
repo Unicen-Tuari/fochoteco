@@ -1,0 +1,279 @@
+/*####################################################
+  ####################  NAV BAR ######################
+  ####################################################*/
+
+.navbar-brand img {
+  height: 40px;
+  margin-top: -10px;
+}
+
+.navbar-default {
+  background-color: #0c5002;
+  font-weight: bold;
+  border-top: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+.navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
+.navbar-default .navbar-nav > .active > a {
+  color: #fff;
+  background-color: #5ea700;
+  border-right: 1px solid #fff;
+  border-left: 1px solid #fff;
+}
+
+.navbar-default .navbar-nav li a:hover {
+  background: #fff;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/*####################################################
+  ###################  PORTFOLIO #####################
+  ####################################################*/
+
+.portfolio {
+  margin-top: 50px;
+  text-align: center;
+}
+
+#ocultar2 {
+  visibility: hidden;
+}
+
+.portfolio .btn-default {
+  background-color: #5ea700;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.imgmicrop {
+   margin-left: 15px;
+   margin-top: 80px;
+   width: 18.8%;
+}
+
+.imgsport img {
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
+/*####################################################
+  ####################  CONTACTO #####################
+  ####################################################*/
+
+.formcontacto2 a {
+  text-decoration: none;
+  color: white;
+  background: #0c5002;
+  padding: 10px 10px;
+  border: 2px solid #fff;
+  border-radius: 10px;
+}
+
+.formcontacto2 .btn-default {
+  background-color: #0c5002;
+  font-size: 38px;
+  color: white;
+  padding-top: 14px;
+  padding-left: 25px;
+  padding-right: 25px;
+  border: 2px solid #fff;
+  border-radius: 30px;
+  margin-bottom: 25px;
+  margin-top: 17.2px;
+}
+
+.formcontacto2 p {
+  color: #d6d6d6;
+  font-size: 18px;
+}
+
+@media (min-width: 360px) {
+  .formcontacto h3{
+    font-size: 180%;
+    color: #282828;
+    font-family: 'arial';
+  }
+  .formcontacto {
+  background-color: white;
+  text-align: center;
+  }
+  .formcontacto .btn-send {
+    background-color: #0c5002;
+    color: #fff;;
+    width: 200px;
+    font-weight: 600;
+  }
+  .formcontacto2 {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  margin-top: 0;
+  color: #fff;
+  }
+}
+
+@media (min-width: 760px) {
+
+.googlemap {
+margin-top: -10px;
+height: 705px;
+}
+
+.formcontacto {
+background-color: white;
+text-align: center;
+margin-top: 0px;
+}
+
+.formcontacto2 {
+background-color: rgba(0, 0, 0, 0.7);
+text-align: center;
+margin-top: 0px;
+color: #fff;
+}
+
+}
+
+@media (min-width: 990px) {
+
+.googlemap {
+margin-top: -10px;
+height: 705px;
+}
+
+.formcontacto {
+background-color: rgba(255, 255, 255, 0.8);
+text-align: center;
+margin-top: -660px;
+}
+
+.formcontacto2 {
+background-color: rgba(0, 0, 0, 0.7);
+text-align: center;
+margin-top: -660px;
+color: #fff;
+}
+
+}
+
+
+/*####################################################
+  ####################  HOME #########################
+  ####################################################*/
+
+#bodyhome {
+  background-color: #0c5002;
+}
+
+.texthome  {
+  margin-top: 70px;
+  color: white;
+  text-align: right;
+  line-height: 2;
+}
+
+.texthome h4 {
+  letter-spacing: 3px;
+  color: #acacac;
+}
+
+.texthome h1 {
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: 50px;
+}
+
+.texthome a {
+  margin-top: 50px;
+  margin-left: 40px;
+  background-color: #0c5002;
+  font-size: 40px;
+  color: #121212;
+  text-decoration: none;
+}
+
+.imgshome {
+  margin-top: 45px;
+}
+
+.imgshome img {
+  border-radius: 20px;
+  border: 2px solid #fff;
+}
+
+.imgworks {
+ margin-left: 40px;
+ margin-top: 40px;
+ width: 33.8%;
+ display: inline-block;
+}
+
+/*####################################################
+  #################  EFECTOS CSS3 ####################
+  ####################################################*/
+
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.9);
+  color: white;
+}
+
+.hvr-grow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  z-index: 2;
+}
+
+.fadeIn {
+  animation: fadein 1.5s;
+-moz-animation: fadein 2.2s; /* Firefox */
+-webkit-animation: fadein 2.2s; /* Safari and Chrome */
+-o-animation: fadein 2.2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}
