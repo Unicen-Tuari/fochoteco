@@ -58,7 +58,7 @@ $.ajax({
 
 actualizarTabla();
 
-$("#btn-agregar").on('click', function(){
+$("#btn-agregar").on('click', function(event){
 
 	event.preventDefault();
 	guardarFila();

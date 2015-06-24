@@ -1,3 +1,4 @@
+$('document').ready(function(){
 
 var blackjack = 0;
 
@@ -33,3 +34,12 @@ else
     blackjack = 0;
   }
 }
+
+
+$("#tablero").on('click', function(event){
+
+	event.preventDefault();
+	tablero();
+
+})
+});

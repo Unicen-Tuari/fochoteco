@@ -61,7 +61,7 @@ $('document').ready(function(){
 	});
 });
 
-/* -------- TOOGLE CONTACTO --------*/
+/* -------- TOOGLE FORM CONTACTO --------*/
 
 function toggle(divId){
   var div = document.getElementById(divId);
@@ -72,7 +72,3 @@ function toggle(divId){
     div.style.visibility = "hidden";
   }
 }
-
-/*---------------------------------
--- JUEGO DADOS --------------------
-----------------------------------*/
