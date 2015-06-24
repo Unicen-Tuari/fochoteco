@@ -88,7 +88,6 @@ tfoot tr td
 
 #ocultar2 {
   visibility: hidden;
-  vis
 }
 
 .portfolio .btn-default {
@@ -216,6 +215,10 @@ color: #fff;
   background-color: #0c5002;
 }
 
+.carousel {
+  border: 2px solid white;
+}
+
 .texthome  {
   margin-top: 70px;
   color: white;
@@ -243,12 +246,12 @@ color: #fff;
   text-decoration: none;
 }
 
-.imgshome {
+.imghome {
   margin-top: 45px;
 }
 
-.imgshome img {
-  border-radius: 20px;
+.imghome>img {
+  border-radius: 10px;
   border: 2px solid #fff;
 }
 

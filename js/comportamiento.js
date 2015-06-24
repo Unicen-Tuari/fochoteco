@@ -11,11 +11,3 @@ function toggle(divId){
     div.style.visibility = "hidden";
   }
 }
-
-function agregarTarea(){
-  var lista = document.getElementById('tareas');
-  var nuevaTarea = document.getElementById('tarea').value;
-  var item = document.createElement('li');
-  item.innerHTML = nuevaTarea;
-  lista.appendChild(item);
-}
