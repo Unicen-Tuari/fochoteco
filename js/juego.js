@@ -13,10 +13,11 @@ function Dado(idDado){
 }
 
 function tirarCantDados(){
-    this.dado1=new Dado("dado1");
+    this.dado1 = new Dado("dado1");
 	  var resultado = [];
 	  var suma = 0;
-	  for (var i = 0; i < $('#cantidadDados').val(); i++) {
+    var cantdados = $('#cantidadDados').val();
+	  for (var i = 0; i < cantdados ; i++) {
 	  	resultado.push(dado1.tirar());
 	  }
 	  $('#input-valores').val(resultado);
@@ -28,17 +29,22 @@ function tirarCantDados(){
 
 function actualizarSuma() {
 
-var suma = tirarCantDados();
-blackjack += suma;
-$("#input-suma").val(blackjack);
-if (blackjack==21){
-    alert("Ganaste! Blackjack 21");
-}
-else
-  if (blackjack>21){
-    alert("Perdiste, superaste 21")
-    blackjack = 0;
+  var suma = tirarCantDados();
+  blackjack += suma;
+  $("#input-suma").val(blackjack);
+  if (blackjack==21){
+      alert("Ganaste! Blackjack 21");
+      blackjack = 0;
+      $('#input-valores').val(0);
+      $('#input-suma').val(0);
   }
+  else
+    if (blackjack>21){
+      alert("Perdiste, superaste 21")
+      blackjack = 0;
+      $('#input-valores').val(0);
+      $('#input-suma').val(0);
+    }
 }
 
 
@@ -46,6 +52,15 @@ $("#tablero").on('click', function(event){
 
 	event.preventDefault();
 	actualizarSuma();
+})
 
+$("#terminarTurno").on('click', function(event){
+
+	event.preventDefault();
+  alert("Termino el turno");
+  blackjack = 0;
+  suma = 0;
+  $('#input-valores').val(0);
+  $('#input-suma').val(0);
 })
 });
