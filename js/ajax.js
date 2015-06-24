@@ -60,7 +60,7 @@ $('document').ready(function(){
 	});
 });
 
-function enviarEinsertar(){
+function guardarFila(){
 var descripcion = $("#descripcion").val();
 var tamanio = $("#tamanio").val();
 var precio = $("#precio").val();
@@ -85,7 +85,7 @@ if (grupo && informacion){
 
        },
        error:function(data){
-         alert('No se pudo comunicar con el servidor');
+         alert('No se pudo agregar la fila');
        }
   });
 }
@@ -112,4 +112,14 @@ $.ajax({
     }
  }
 });
+}
+
+function toggle(divId){
+  var div = document.getElementById(divId);
+  if (div.style.visibility == "hidden") {
+    div.style.visibility = "visible";
+  }
+  else {
+    div.style.visibility = "hidden";
+  }
 }

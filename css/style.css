@@ -81,31 +81,32 @@ tfoot tr td
   ###################  PORTFOLIO #####################
   ####################################################*/
 
-.portfolio {
-  margin-top: 50px;
-  text-align: center;
-}
+  .portfolio ul li img
+  {
+    width: 250px;
+    margin-top: 20px;
+    margin-right: 30px;
+    margin-bottom: 30px;
+    margin-left: 5px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+   /*  float: left;*/
+  }
 
-#ocultar2 {
-  visibility: hidden;
-}
+  .portfolio ul li
+  {
+    margin-left: 0px;
+    list-style: none;
+    float: left;
+  }
 
-.portfolio .btn-default {
-  background-color: #5ea700;
-  color: #fff;
-  border: 2px solid #fff;
-}
 
-.imgmicrop {
-   margin-left: 15px;
-   margin-top: 80px;
-   width: 18.8%;
-}
 
-.imgsport img {
-  border-radius: 20px;
-  border: 2px solid #fff;
-}
+  .portfolio h2 {
+    color: #fff;
+    text-align: center;
+  }
+
 
 /*####################################################
   ####################  CONTACTO #####################
