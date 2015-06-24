@@ -1,15 +1,14 @@
 "use strict";
 
-// Solo Ejecuta Codigo cuando el DOM esta Totalmente Cargado
 $('document').ready(function(){
-	// Definicion de Variables con los Nombres de las Secciones
+
 	nosotros = 'home2';
 	servicios = 'servicios';
 	portfolio = 'portfolio';
 	contacto = 'contacto';
+	dados = 'dados'
 
-	/* Funcion que Carga en el Contenedor Principal la
-		Seccion que se le pase como Parametro*/
+
 	function cargarSeccion(seccion){
 		$.ajax({
 			type: 'GET',
@@ -24,10 +23,8 @@ $('document').ready(function(){
 		});
 	};
 
-	// Carga la Pagina de Inicio al Ingresar o Recargar el Sitio
 	cargarSeccion(nosotros);
 
-	// Carga la Seccion Inicio al Presionar Inicio en el NAV
 	$('#nosotros').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");
@@ -35,7 +32,6 @@ $('document').ready(function(){
 		cargarSeccion(nosotros);
 	});
 
-	// Carga la Seccion Actividades al Presionar Actividades en el NAV
 	$('#servicios').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");
@@ -43,7 +39,6 @@ $('document').ready(function(){
 		cargarSeccion(servicios);
 	});
 
-	// Carga la Seccion Galeria al Presionar Galeria en el NAV
 	$('#portfolio').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");
@@ -51,12 +46,18 @@ $('document').ready(function(){
 		cargarSeccion(portfolio);
 	});
 
-	// Carga la Seccion Contacto al Presionar Contacto en el NAV
 	$('#contacto').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");
 		$(this).addClass("active");
 		cargarSeccion(contacto);
+	});
+
+	$('#dados').on('click',function(event){
+		event.preventDefault();
+		$(".nav").find(".active").removeClass("active");
+		$(this).addClass("active");
+		cargarSeccion(dados);
 	});
 });
 
@@ -123,3 +124,7 @@ function toggle(divId){
     div.style.visibility = "hidden";
   }
 }
+
+/*---------------------------------
+-- JUEGO DADOS --------------------
+----------------------------------*/
