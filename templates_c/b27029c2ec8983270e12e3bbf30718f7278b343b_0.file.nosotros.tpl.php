@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-23 21:15:48
+<?php /* Smarty version 3.1.27, created on 2015-09-23 22:28:10
          compiled from "C:\Xampp\htdocs\fochoteco\templates\nosotros.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:17925602fa643d37a2_02620070%%*/
+/*%%SmartyHeaderCode:2225556030b5a908f24_04919592%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b27029c2ec8983270e12e3bbf30718f7278b343b' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\nosotros.tpl',
-      1 => 1443031942,
+      1 => 1443040088,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17925602fa643d37a2_02620070',
+  'nocache_hash' => '2225556030b5a908f24_04919592',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5602fa64411fb6_96869373',
+  'unifunc' => 'content_56030b5a93fa33_93306711',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5602fa64411fb6_96869373')) {
-function content_5602fa64411fb6_96869373 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56030b5a93fa33_93306711')) {
+function content_56030b5a93fa33_93306711 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '17925602fa643d37a2_02620070';
+$_smarty_tpl->properties['nocache_hash'] = '2225556030b5a908f24_04919592';
 ?>
 <div class="container">
   <div class="row">
@@ -31,9 +31,9 @@ $_smarty_tpl->properties['nocache_hash'] = '17925602fa643d37a2_02620070';
       <h4> LEADERS IN GRAPHIC DESIGN </h5>
       <h1> CONOCENOS </h1>
       <p>Lima Limón es una empresa de servicios publicitarios integrales que proporciona a sus clientes productos y servicios de gran valor, innovadores, a través del desarrollo humano mediante la ejecución de sus trabajos en la industria para la aplicación y administración de ésta tecnología logrando el mejor aprovechamiento de la misma</p>
-      <a id="servicios" href="servicios.html" class="glyphicon glyphicon-wrench hvr-grow" title="Servicios"></a>
-      <a id="portolio" href="portfolio.html" class="glyphicon glyphicon-briefcase hvr-grow" title="Portfolio"></a>
-      <a id="contacto" href="contacto.html" class="glyphicon glyphicon-edit hvr-grow" title="Contacto"></a>
+      <a id="btn-servicios" href="#" class="glyphicon glyphicon-wrench hvr-grow" title="Servicios"></a>
+      <a id="btn-portfolio" href="#" class="glyphicon glyphicon-briefcase hvr-grow" title="Portfolio"></a>
+      <a id="btn-contacto" href="#" class="glyphicon glyphicon-edit hvr-grow" title="Contacto"></a>
     </div>
 
     <div class="col-md-offset-1 col-md-5 imghome fadeIn">
@@ -73,6 +73,9 @@ $_smarty_tpl->properties['nocache_hash'] = '17925602fa643d37a2_02620070';
 
   </div>
 </div>
+  <?php echo '<script'; ?>
+ src="js/ajax-btns.js"><?php echo '</script'; ?>
+>
 <?php }
 }
 ?>

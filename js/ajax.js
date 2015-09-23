@@ -39,6 +39,7 @@ $('document').ready(function(){
 		cargarSeccion(servicios);
 	});
 
+
 	$('#portfolio').on('click', function(event){
 		event.preventDefault();
 		$(".nav").find(".active").removeClass("active");

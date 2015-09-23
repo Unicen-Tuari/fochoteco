@@ -5,9 +5,9 @@
       <h4> LEADERS IN GRAPHIC DESIGN </h5>
       <h1> CONOCENOS </h1>
       <p>Lima Limón es una empresa de servicios publicitarios integrales que proporciona a sus clientes productos y servicios de gran valor, innovadores, a través del desarrollo humano mediante la ejecución de sus trabajos en la industria para la aplicación y administración de ésta tecnología logrando el mejor aprovechamiento de la misma</p>
-      <a id="servicios" href="servicios.html" class="glyphicon glyphicon-wrench hvr-grow" title="Servicios"></a>
-      <a id="portolio" href="portfolio.html" class="glyphicon glyphicon-briefcase hvr-grow" title="Portfolio"></a>
-      <a id="contacto" href="contacto.html" class="glyphicon glyphicon-edit hvr-grow" title="Contacto"></a>
+      <a id="btn-servicios" href="#" class="glyphicon glyphicon-wrench hvr-grow" title="Servicios"></a>
+      <a id="btn-portfolio" href="#" class="glyphicon glyphicon-briefcase hvr-grow" title="Portfolio"></a>
+      <a id="btn-contacto" href="#" class="glyphicon glyphicon-edit hvr-grow" title="Contacto"></a>
     </div>
 
     <div class="col-md-offset-1 col-md-5 imghome fadeIn">
@@ -47,3 +47,4 @@
 
   </div>
 </div>
+  <script src="js/ajax-btns.js"></script>
