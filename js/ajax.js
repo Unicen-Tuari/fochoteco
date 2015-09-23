@@ -6,14 +6,14 @@ $('document').ready(function(){
 	var servicios = 'servicios';
 	var portfolio = 'portfolio';
 	var contacto = 'contacto';
-	var dados = 'dados'
+	var dados = 'dados';
 
 
 	function cargarSeccion(seccion){
 		$.ajax({
 			type: 'GET',
 			dataType: 'HTML',
-			url: seccion + '.html',
+			url: 'index.php?nav='+seccion,
 			success: function(data){
 						$('#conthome').html(data);
 					},
@@ -23,7 +23,7 @@ $('document').ready(function(){
 		});
 	};
 
-	//cargarSeccion(nosotros);  /* INICIO nosotros.html AL CARGAR LA PAG */
+	cargarSeccion(nosotros);  /* INICIO nosotros.html AL CARGAR LA PAG */
 
 	$('#nosotros').on('click', function(event){
 		event.preventDefault();
