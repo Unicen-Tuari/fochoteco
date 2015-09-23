@@ -2,11 +2,11 @@
 
 $('document').ready(function(){
 
-	nosotros = 'home2';
-	servicios = 'servicios';
-	portfolio = 'portfolio';
-	contacto = 'contacto';
-	dados = 'dados'
+	var nosotros = 'home2';
+	var servicios = 'servicios';
+	var portfolio = 'portfolio';
+	var contacto = 'contacto';
+	var dados = 'dados'
 
 
 	function cargarSeccion(seccion){
