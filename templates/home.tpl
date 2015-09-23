@@ -22,7 +22,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="home.html"><img alt="Brand" src="images/port5.png"></a>
+        <a class="navbar-brand" href=""><img alt="Brand" src="images/port5.png"></a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

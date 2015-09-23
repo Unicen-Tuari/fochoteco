@@ -2,7 +2,7 @@
 
 $('document').ready(function(){
 
-	var nosotros = 'home2';
+	var nosotros = 'nosotros';
 	var servicios = 'servicios';
 	var portfolio = 'portfolio';
 	var contacto = 'contacto';
@@ -23,7 +23,7 @@ $('document').ready(function(){
 		});
 	};
 
-	cargarSeccion(nosotros);  /* INICIO nosotros.html AL CARGAR LA PAG */
+	//cargarSeccion(nosotros);  /* INICIO nosotros.html AL CARGAR LA PAG */
 
 	$('#nosotros').on('click', function(event){
 		event.preventDefault();
