@@ -13,7 +13,7 @@ $('document').ready(function(){
 		$.ajax({
 			type: 'GET',
 			dataType: 'HTML',
-			url: 'index.php?nav='+seccion,
+			url: 'index.php?section='+seccion,
 			success: function(data){
 						$('#conthome').html(data);
 					},

@@ -1,33 +1,17 @@
 <?php
 
-include_once('libs/Smarty.class.php');
+REQUIRE_ONCE('Controller/controller.php');
+REQUIRE_ONCE('Config/config_app.php');
 
-$templateEngine = new Smarty();
-$templateEngine->debugging = false;
+$controlador = new Controller();
 
-if(!array_key_exists("nav",$_REQUEST))
+if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 {
-  $templateEngine->display('home.tpl');
+  $controlador->showSection(ConfigApp::$SECTION_HOME);
 }
-elseif ($_REQUEST["nav"] === "nosotros")
-  {
-    $templateEngine->display('nosotros.tpl');
-  }
-  elseif ($_REQUEST["nav"] === "servicios")
-    {
-      $templateEngine->display('servicios.tpl');
-    }
-    elseif ($_REQUEST["nav"] === "portfolio")
-      {
-        $templateEngine->display('portfolio.tpl');
-      }
-      elseif ($_REQUEST["nav"] === "contacto")
-        {
-          $templateEngine->display('contacto.tpl');
-        }
-        elseif ($_REQUEST["nav"] === "dados")
-          {
-            $templateEngine->display('dados.tpl');
-          }
+else 
+ {
+  $controlador->showSection($_REQUEST[ConfigApp::$SECTION]);
+}
 
 ?>
