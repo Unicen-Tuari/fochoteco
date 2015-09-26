@@ -31,11 +31,12 @@
           <li id="nosotros" class="active"><a href="#" > NOSOTROS <span class="sr-only">(current)</span></a></li>
           <li id="servicios"><a href="#" > SERVICIOS </a></li>
           <li id="portfolio"><a href="#"> PORTFOLIO </a></li>
+          <li id="novedades"><a href="#"> NOVEDADES </a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
           <li id="contacto"><a href="#"> CONTACTO  </a></li>
-          <li id="dados"><a href="">DADOS</a></li>
+          <!-- <li id="dados"><a href="">DADOS</a></li> -->
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-23 21:13:24
+<?php /* Smarty version 3.1.27, created on 2015-09-24 20:31:59
          compiled from "C:\Xampp\htdocs\fochoteco\templates\home.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:270115602f9d46dbf14_66531230%%*/
+/*%%SmartyHeaderCode:168835604419f3b4bb4_51251312%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f2083b1beae398c9c8e6e5532be53dc7ff2174c6' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\home.tpl',
-      1 => 1443035567,
+      1 => 1443119518,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '270115602f9d46dbf14_66531230',
+  'nocache_hash' => '168835604419f3b4bb4_51251312',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5602f9d470eba9_77368881',
+  'unifunc' => 'content_5604419f41a4d7_62405995',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5602f9d470eba9_77368881')) {
-function content_5602f9d470eba9_77368881 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5604419f41a4d7_62405995')) {
+function content_5604419f41a4d7_62405995 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '270115602f9d46dbf14_66531230';
+$_smarty_tpl->properties['nocache_hash'] = '168835604419f3b4bb4_51251312';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -57,11 +57,12 @@ $_smarty_tpl->properties['nocache_hash'] = '270115602f9d46dbf14_66531230';
           <li id="nosotros" class="active"><a href="#" > NOSOTROS <span class="sr-only">(current)</span></a></li>
           <li id="servicios"><a href="#" > SERVICIOS </a></li>
           <li id="portfolio"><a href="#"> PORTFOLIO </a></li>
+          <li id="novedades"><a href="#"> NOVEDADES </a></li>
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
           <li id="contacto"><a href="#"> CONTACTO  </a></li>
-          <li id="dados"><a href="">DADOS</a></li>
+          <!-- <li id="dados"><a href="">DADOS</a></li> -->
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->

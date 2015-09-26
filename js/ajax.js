@@ -6,6 +6,7 @@ $('document').ready(function(){
 	var servicios = 'servicios';
 	var portfolio = 'portfolio';
 	var contacto = 'contacto';
+	var novedades = 'novedades';
 	var dados = 'dados';
 
 
@@ -52,6 +53,13 @@ $('document').ready(function(){
 		$(".nav").find(".active").removeClass("active");
 		$(this).addClass("active");
 		cargarSeccion(contacto);
+	});
+
+	$('#novedades').on('click', function(event){
+		event.preventDefault();
+		$(".nav").find(".active").removeClass("active");
+		$(this).addClass("active");
+		cargarSeccion(novedades);
 	});
 
 	$('#dados').on('click',function(event){
