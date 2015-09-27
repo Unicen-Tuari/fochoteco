@@ -13,7 +13,11 @@
 
   <body id="bodyhome">
 
-  <div class="col-sm-6" style="background-color: white; margin-top: 10px; border-radius: 4px; ">
+    <div id="conthome" class="col-sm-6">
+
+    </div>
+
+  <div class="col-sm-5" style="background-color: #ecf2ed; margin-top: 50px;margin-left: 10px; border-radius: 4px; ">
 
     <form class="form-horizontal" action="index.html" method="post" style="margin-top: 30px; text-align:center;">
       <div class="form-group">
@@ -22,12 +26,8 @@
               CATEGORIA
               <span class="caret"></span>
             </button>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-              <!-- <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li><a href="#">Separated link</a></li> -->
-              
+            <ul id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
+
             </ul>
           </div>
       </div>
@@ -80,12 +80,11 @@
   </div>
 
 
-  <div id="conthome" class="col-sm-6">
 
-  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!-- jQuery -->
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ajax-admin.js"></script>
+  <script src="js/dropdown.js"></script>
   </body>
 </html>

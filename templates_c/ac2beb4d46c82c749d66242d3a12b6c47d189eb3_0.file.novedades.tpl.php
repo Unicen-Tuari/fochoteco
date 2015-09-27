@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-27 20:53:57
+<?php /* Smarty version 3.1.27, created on 2015-09-27 21:58:11
          compiled from "C:\Xampp\htdocs\fochoteco\templates\novedades.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:943556083b45a3cd81_46914724%%*/
+/*%%SmartyHeaderCode:1954256084a53e1ecb3_36147499%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ac2beb4d46c82c749d66242d3a12b6c47d189eb3' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\novedades.tpl',
-      1 => 1443380029,
+      1 => 1443383889,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '943556083b45a3cd81_46914724',
+  'nocache_hash' => '1954256084a53e1ecb3_36147499',
   'variables' => 
   array (
     'novedades' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56083b45a87110_47074905',
+  'unifunc' => 'content_56084a53e651c6_81475520',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56083b45a87110_47074905')) {
-function content_56083b45a87110_47074905 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56084a53e651c6_81475520')) {
+function content_56084a53e651c6_81475520 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '943556083b45a3cd81_46914724';
+$_smarty_tpl->properties['nocache_hash'] = '1954256084a53e1ecb3_36147499';
 ?>
 <div class="container-fluid">
   <div class="row" style="margin-bottom: 40px;">
@@ -67,13 +67,13 @@ $_smarty_tpl->tpl_vars['imagen'] = $foreach_imagen_Sav;
 }
 ?>
           <div class="col-sm-10">
-            <h6 style="text-align: right; color: blue;"> <?php echo $_smarty_tpl->tpl_vars['novedad']->value['fk_id_categoria'];?>
+            <h6 style="text-align: left; font-weight: bold; color: #021c01;"> Categoria: <?php echo $_smarty_tpl->tpl_vars['novedad']->value['fk_id_categoria'];?>
  </h6>
             <h3 style="font-weight: bold;"><?php echo $_smarty_tpl->tpl_vars['novedad']->value['titulo'];?>
 </h3>
             <?php echo $_smarty_tpl->tpl_vars['novedad']->value['descripcion'];?>
 
-            <h6 style="text-align: right; color: blue;"> Ver noticia completa </h6>
+            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
           </div>
         </li>
 

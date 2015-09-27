@@ -10,10 +10,10 @@
           </div>
           {/foreach}
           <div class="col-sm-10">
-            <h6 style="text-align: right; color: blue;"> {$novedad['fk_id_categoria']} </h6>
+            <h6 style="text-align: left; font-weight: bold; color: #021c01;"> Categoria: {$novedad['fk_id_categoria']} </h6>
             <h3 style="font-weight: bold;">{$novedad['titulo']}</h3>
             {$novedad['descripcion']}
-            <h6 style="text-align: right; color: blue;"> Ver noticia completa </h6>
+            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
           </div>
         </li>
 

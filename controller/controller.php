@@ -23,6 +23,11 @@ REQUIRE_ONCE('model/model.php');
 			{
 	    $this->view->showNews($section, $this->model->getNews());
 	  	}
+
+			function mostrarDropdown($section)
+			{
+				$this->view->showDropdown($section, $this->model->getCategories());
+			}
 	}
 
 ?>

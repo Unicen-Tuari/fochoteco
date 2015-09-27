@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-27 20:53:52
+<?php /* Smarty version 3.1.27, created on 2015-09-27 22:14:20
          compiled from "C:\Xampp\htdocs\fochoteco\templates\novedades-admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1482656083b40d7bce2_29557911%%*/
+/*%%SmartyHeaderCode:744956084e1ccd4666_42636129%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3a411f8c91e134420cfd2eadc78b4f8d82864153' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\novedades-admin.tpl',
-      1 => 1443380022,
+      1 => 1443384859,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1482656083b40d7bce2_29557911',
+  'nocache_hash' => '744956084e1ccd4666_42636129',
   'variables' => 
   array (
     'novedades' => 0,
@@ -22,15 +22,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56083b40dc2205_38522973',
+  'unifunc' => 'content_56084e1cd1ab76_67254203',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56083b40dc2205_38522973')) {
-function content_56083b40dc2205_38522973 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56084e1cd1ab76_67254203')) {
+function content_56084e1cd1ab76_67254203 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1482656083b40d7bce2_29557911';
+$_smarty_tpl->properties['nocache_hash'] = '744956084e1ccd4666_42636129';
 ?>
-  <div class="row">
+  <div class="row" style="margin-top: 50px; margin-left: 50px;">
       <ul>
         <?php
 $_from = $_smarty_tpl->tpl_vars['novedades']->value;
@@ -44,7 +44,7 @@ $_smarty_tpl->tpl_vars['novedad']->_loop = true;
 $foreach_novedad_Sav = $_smarty_tpl->tpl_vars['novedad'];
 ?>
 
-        <li class="list-group-item col-sm-12" style="margin-top: 10px;">
+        <li class="list-group-item col-sm-12" style="background-color: #ecf2ed;" >
           <?php
 $_from = $_smarty_tpl->tpl_vars['novedad']->value['imagenes'];
 if (!is_array($_from) && !is_object($_from)) {
@@ -66,13 +66,13 @@ $_smarty_tpl->tpl_vars['imagen'] = $foreach_imagen_Sav;
 }
 ?>
           <div class="col-sm-9">
-            <h6 style="text-align: right; color: blue;"> <?php echo $_smarty_tpl->tpl_vars['novedad']->value['fk_id_categoria'];?>
+            <h6 style="text-align: left; font-weight: bold; color: #021c01;"> Categoria: <?php echo $_smarty_tpl->tpl_vars['novedad']->value['fk_id_categoria'];?>
  </h6>
             <h3 style="font-weight: bold;"><?php echo $_smarty_tpl->tpl_vars['novedad']->value['titulo'];?>
 </h3>
             <?php echo $_smarty_tpl->tpl_vars['novedad']->value['descripcion'];?>
 
-            <h6 style="text-align: right; color: blue;"> Ver noticia completa </h6>
+            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
           </div>
         </li>
 

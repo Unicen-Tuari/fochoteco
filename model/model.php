@@ -12,6 +12,17 @@ class Model
     }
 
 
+function getCategories(){
+  $categorias = array();
+  $consulta = $this->db->prepare("SELECT * FROM categoria");
+  $consulta->execute();
+//Todas las novedades
+  while($categoria = $consulta->fetch(PDO::FETCH_ASSOC)) {
+    $categorias[]=$categoria;
+  }
+  return $categorias;
+}
+
 function getNews(){
   $novedades = array();
   $consulta = $this->db->prepare("SELECT * FROM novedad");
