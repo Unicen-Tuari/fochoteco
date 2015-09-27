@@ -9,7 +9,11 @@ if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 {
   $controlador->showSection(ConfigApp::$SECTION_HOME);
 }
-else 
+elseif (($_REQUEST[ConfigApp::$SECTION]=="novedades-admin") || ($_REQUEST[ConfigApp::$SECTION]=="novedades"))
+{
+  $controlador->mostrarNovedades($_REQUEST[ConfigApp::$SECTION]);
+}
+else
  {
   $controlador->showSection($_REQUEST[ConfigApp::$SECTION]);
 }

@@ -1,15 +1,14 @@
-<div class="container-fluid">
-  <div class="row" style="margin-bottom: 40px;">
+  <div class="row">
       <ul>
         {foreach $novedades as $novedad}
 
-        <li class="list-group-item col-sm-offset-1 col-sm-10" style="margin-top: 10px;">
+        <li class="list-group-item col-sm-12" style="margin-top: 10px;">
           {foreach $novedad['imagenes'] as $imagen}
-          <div class="col-sm-2" style="margin-top: 0.8%;">
-          <img src="{$imagen}" alt="{$imagen}" class="img-thumbnail" style="margin: auto; width: 85%;"/>
+          <div class="col-sm-3" style="margin-top: 1%;">
+          <img src="{$imagen}" alt="{$imagen}" class="img-thumbnail" style="margin: auto; width: 100%;"/>
           </div>
           {/foreach}
-          <div class="col-sm-10">
+          <div class="col-sm-9">
             <h6 style="text-align: right; color: blue;"> {$novedad['fk_id_categoria']} </h6>
             <h3 style="font-weight: bold;">{$novedad['titulo']}</h3>
             {$novedad['descripcion']}
@@ -18,6 +17,5 @@
         </li>
 
         {/foreach}
-      </ul>
+        </ul>
   </div>
-</div>
