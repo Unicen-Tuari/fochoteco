@@ -34,6 +34,16 @@ REQUIRE_ONCE('model/model.php');
 			{
 				$this->view->showDropdown($section, $this->model->getCategories());
 			}
+			function agregarNuevaCategoria()
+			{
+				$this->model->addCategoria($_REQUEST['nuevaCategoria']);			 //Id del input de la nueva categoria a agregar
+			}
+			function agregarNuevaNoticia()
+			{
+				//Comprobar si estan seteados.
+				$this->model->addNew($_REQUEST['dropdown'], $_REQUEST['nuevoTitulo'], $_REQUEST['nuevaDescripcion'], $_REQUEST['nuevaNoticia'], $_FILES['nuevasImgsNoticia']);
+				// $this->model->addImgs($_FILES['nuevasImgsNoticia']);
+			}
 	}
 
 ?>

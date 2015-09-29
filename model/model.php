@@ -5,6 +5,7 @@ class Model
 {
   private $db;
   private $novedades;
+  private $categorias;
 
     function __construct() {
         $this->db = new PDO('mysql:host=localhost;dbname=web2;charset=utf8', 'root', '');
@@ -58,6 +59,55 @@ function getFullNew($id){
 
   return $novedad;
 }
+
+function addCategoria($categoria){
+  if(strlen($categoria) > 4){
+  try{
+    $this->db->beginTransaction();
+    $queryInsert = $this->db->prepare('INSERT INTO categoria(nombre_categoria) VALUES(?)');
+    $queryInsert->execute(array($categoria));
+    $this->db->commit();
+  } catch(Exception $e){
+    $this->db->rollBack();
+  }
+}
+}
+
+function subirImagenes($imagenes){
+    $carpeta = "uploads/imagenes/";
+    $destinos_finales = array();
+    foreach ($imagenes["tmp_name"] as $key => $value) {
+      $destinos_finales[] = $carpeta.uniqid().$imagenes["name"][$key];
+      move_uploaded_file($value, end($destinos_finales));
+    }
+    return $destinos_finales;
+}
+
+function addNew($id_categoria, $titulo, $descripcion, $noticia, $imagenes){
+  try
+    {
+   $destinos_finales=$this->subirImagenes($imagenes);
+    $this->db->beginTransaction();
+    $queryInsert = $this->db->prepare('INSERT INTO novedad(titulo, descripcion, noticia, fk_id_categoria) VALUES(?,?,?,?)');
+    $queryInsert->execute(array($titulo, $descripcion, $noticia, $id_categoria));
+   $id_producto = $this->db->lastInsertId();
+    //Insertar las imagenes
+
+   foreach ($destinos_finales as $key => $value) {
+     $consulta = $this->db->prepare('INSERT INTO imagen(fk_id_novedad, ruta) VALUES(?,?)');
+     $consulta->execute(array($id_producto, $value));
+    }
+    $this->db->commit();
+    }
+  catch(Exception $e)
+    {
+    $this->db->rollBack();
+    }
+}
+
+// function addImgs(){
+//
+// }
 
 }
 

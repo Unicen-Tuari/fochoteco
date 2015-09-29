@@ -10,7 +10,7 @@ $('document').ready(function(){
 			dataType: 'HTML',
 			url: 'index.php?section='+seccion,
 			success: function(data){
-						$('#conthome').html(data);
+						$('#contadmin').html(data);
 					},
 			error: function(){
 						alert('Error al Cargar la Pagina de ' + seccion);
@@ -18,7 +18,7 @@ $('document').ready(function(){
 		});
 	};
 
-	cargarSeccion(novedades);  /* INICIO novedades.html AL CARGAR LA PAG */
+	cargarSeccion(novedades);
 
 // Lo voy a usar en un click futuro para agregar novedades.
 

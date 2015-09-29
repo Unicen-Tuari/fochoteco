@@ -13,11 +13,18 @@ elseif (($_REQUEST[ConfigApp::$SECTION]=="novedades-admin") || ($_REQUEST[Config
 {
   $controlador->mostrarNovedades($_REQUEST[ConfigApp::$SECTION]);
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="dropdown") {
-  $controlador->mostrarDropdown(ConfigApp::$DROPDOWN);
+elseif (($_REQUEST[ConfigApp::$SECTION]=="dropdown") || ($_REQUEST[ConfigApp::$SECTION]=="listacategorias"))
+{
+  $controlador->mostrarDropdown($_REQUEST[ConfigApp::$SECTION]);
 }
 elseif ($_REQUEST[ConfigApp::$SECTION]=="noticia" && isset($_REQUEST['id'])) {
   $controlador->mostrarNoticia($_REQUEST[ConfigApp::$SECTION],$_REQUEST['id']);
+}
+elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_noticia") {
+  $controlador->agregarNuevaNoticia();
+}
+elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_categoria") {
+  $controlador->agregarNuevaCategoria();
 }
 else
  {
