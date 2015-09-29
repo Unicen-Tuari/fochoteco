@@ -43,6 +43,22 @@ function getNews(){
   }
   return $novedades;
 }
+
+function getFullNew($id){
+  $novedad = array();
+
+  $consultaNovedad = $this->db->prepare("SELECT * FROM novedad WHERE id_novedad=?");
+  $consultaNovedad->execute(array($id));
+  $novedad = $consultaNovedad->fetch();
+
+  $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=?");
+  $consultaImagen->execute(array($id));
+  $pathImagen = $consultaImagen->fetchAll()[0];
+  $novedad['imagenes'] = $pathImagen["ruta"];
+
+  return $novedad;
+}
+
 }
 
 ?>

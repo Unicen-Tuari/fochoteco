@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-27 21:58:11
+<?php /* Smarty version 3.1.27, created on 2015-09-29 05:47:15
          compiled from "C:\Xampp\htdocs\fochoteco\templates\novedades.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1954256084a53e1ecb3_36147499%%*/
+/*%%SmartyHeaderCode:8800560a09c3b48067_90557385%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ac2beb4d46c82c749d66242d3a12b6c47d189eb3' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\novedades.tpl',
-      1 => 1443383889,
+      1 => 1443498432,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1954256084a53e1ecb3_36147499',
+  'nocache_hash' => '8800560a09c3b48067_90557385',
   'variables' => 
   array (
     'novedades' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56084a53e651c6_81475520',
+  'unifunc' => 'content_560a09c3b84f65_54524255',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56084a53e651c6_81475520')) {
-function content_56084a53e651c6_81475520 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560a09c3b84f65_54524255')) {
+function content_560a09c3b84f65_54524255 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1954256084a53e1ecb3_36147499';
+$_smarty_tpl->properties['nocache_hash'] = '8800560a09c3b48067_90557385';
 ?>
 <div class="container-fluid">
   <div class="row" style="margin-bottom: 40px;">
@@ -73,7 +73,8 @@ $_smarty_tpl->tpl_vars['imagen'] = $foreach_imagen_Sav;
 </h3>
             <?php echo $_smarty_tpl->tpl_vars['novedad']->value['descripcion'];?>
 
-            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
+            <button value=<?php echo $_smarty_tpl->tpl_vars['novedad']->value['id_novedad'];?>
+ class="verNoticia"><h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6></button>
           </div>
         </li>
 
@@ -84,6 +85,10 @@ $_smarty_tpl->tpl_vars['novedad'] = $foreach_novedad_Sav;
       </ul>
   </div>
 </div>
+
+<?php echo '<script'; ?>
+ src="js/noticiaCompleta.js"><?php echo '</script'; ?>
+>
 <?php }
 }
 ?>

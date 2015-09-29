@@ -13,7 +13,7 @@
             <h6 style="text-align: left; font-weight: bold; color: #021c01;"> Categoria: {$novedad['fk_id_categoria']} </h6>
             <h3 style="font-weight: bold;">{$novedad['titulo']}</h3>
             {$novedad['descripcion']}
-            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
+            <button value={$novedad['id_novedad']} class="verNoticia"><h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6></button>
           </div>
         </li>
 
@@ -21,3 +21,5 @@
       </ul>
   </div>
 </div>
+
+<script src="js/noticiaCompleta.js"></script>

@@ -24,6 +24,12 @@ REQUIRE_ONCE('model/model.php');
 	    $this->view->showNews($section, $this->model->getNews());
 	  	}
 
+			function mostrarNoticia($section, $id)
+			{
+
+	    $this->view->showFullNew($section, $this->model->getFullNew($id));
+	  	}
+
 			function mostrarDropdown($section)
 			{
 				$this->view->showDropdown($section, $this->model->getCategories());

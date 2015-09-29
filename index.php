@@ -16,6 +16,9 @@ elseif (($_REQUEST[ConfigApp::$SECTION]=="novedades-admin") || ($_REQUEST[Config
 elseif ($_REQUEST[ConfigApp::$SECTION]=="dropdown") {
   $controlador->mostrarDropdown(ConfigApp::$DROPDOWN);
 }
+elseif ($_REQUEST[ConfigApp::$SECTION]=="noticia" && isset($_REQUEST['id'])) {
+  $controlador->mostrarNoticia($_REQUEST[ConfigApp::$SECTION],$_REQUEST['id']);
+}
 else
  {
   $controlador->showSection($_REQUEST[ConfigApp::$SECTION]);

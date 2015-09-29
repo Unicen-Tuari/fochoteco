@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-27 22:01:30
+<?php /* Smarty version 3.1.27, created on 2015-09-29 16:12:07
          compiled from "C:\Xampp\htdocs\fochoteco\templates\admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:521656084b1a444b46_72864136%%*/
+/*%%SmartyHeaderCode:12372560a9c37dc5cd2_45072449%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '82a60907b23a1dbee2e55dcd96506e328459ebfa' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\admin.tpl',
-      1 => 1443384089,
+      1 => 1443535922,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '521656084b1a444b46_72864136',
+  'nocache_hash' => '12372560a9c37dc5cd2_45072449',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56084b1a47f4d4_88237167',
+  'unifunc' => 'content_560a9c37e00668_54017058',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56084b1a47f4d4_88237167')) {
-function content_56084b1a47f4d4_88237167 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_560a9c37e00668_54017058')) {
+function content_560a9c37e00668_54017058 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '521656084b1a444b46_72864136';
+$_smarty_tpl->properties['nocache_hash'] = '12372560a9c37dc5cd2_45072449';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -47,14 +47,17 @@ $_smarty_tpl->properties['nocache_hash'] = '521656084b1a444b46_72864136';
 
     <form class="form-horizontal" action="index.html" method="post" style="margin-top: 30px; text-align:center;">
       <div class="form-group">
-          <div class="dropdown col-sm-12" style=" text-align:left;">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <div class="dropdown col-sm-4">
+            <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               CATEGORIA
               <span class="caret"></span>
             </button>
             <ul id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-            </ul>
+            </ul> -->
+            <select id="dropdown" name="dropcat">
+
+        		</select>
           </div>
       </div>
       <div class="form-group">

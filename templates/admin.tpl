@@ -21,14 +21,17 @@
 
     <form class="form-horizontal" action="index.html" method="post" style="margin-top: 30px; text-align:center;">
       <div class="form-group">
-          <div class="dropdown col-sm-12" style=" text-align:left;">
-            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+          <div class="dropdown col-sm-4">
+            <!-- <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
               CATEGORIA
               <span class="caret"></span>
             </button>
             <ul id="dropdown" class="dropdown-menu" aria-labelledby="dropdownMenu1">
 
-            </ul>
+            </ul> -->
+            <select id="dropdown" name="dropcat">
+
+        		</select>
           </div>
       </div>
       <div class="form-group">

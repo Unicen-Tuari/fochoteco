@@ -24,6 +24,12 @@ REQUIRE_ONCE ('libs/Smarty.class.php');
       $this->smarty->display($section .'.tpl');
     }
 
+    function showFullNew($section, $novedad)
+    {
+      $this->smarty->assign("novedad", $novedad);
+      $this->smarty->display($section .'.tpl');
+    }
+
     function showDropdown($section, $categorias)
     {
       $this->smarty->assign("categorias", $categorias);
