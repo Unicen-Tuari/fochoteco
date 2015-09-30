@@ -4,7 +4,7 @@ $('document').ready(function(){
 
 	var novedades = 'novedades-admin';
 
-	function cargarSeccion(seccion){
+	function cargarContenedor(seccion){
 		$.ajax({
 			type: 'GET',
 			dataType: 'HTML',
@@ -18,7 +18,7 @@ $('document').ready(function(){
 		});
 	};
 
-	cargarSeccion(novedades);
+	cargarContenedor(novedades);
 
 	$("#formAgregarNoticia").submit(function(event){
 	event.preventDefault();
@@ -29,7 +29,7 @@ $('document').ready(function(){
 					contentType : false,
 					processData : false,
 					success: function(data){
-						cargarSeccion(novedades);
+						cargarContenedor(novedades);
 						$("#nuevoTitulo").val('');
 						$("#nuevaDescripcion").val('');
 						$("#nuevaNoticia").val('');

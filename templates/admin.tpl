@@ -13,6 +13,10 @@
 
   <body id="bodyhome">
 
+    <form id="imgAjax">
+      <input type="file"  id="imagesToUpload2" name="imagesToUpload2[]" multiple>
+    </form>
+
     <div id="contadmin" class="col-sm-6">
 
     </div>
@@ -81,6 +85,5 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ajax-admin.js"></script>
   <script src="js/dropdown.js"></script>
-  <script src="js/nueva-noticia.js"></script>
   </body>
 </html>

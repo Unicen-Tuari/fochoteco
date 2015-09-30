@@ -9,6 +9,12 @@ if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 {
   $controlador->showSection(ConfigApp::$SECTION_HOME);
 }
+elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_imagenes") {
+  $controlador->agregarImagenes();
+}
+elseif ($_REQUEST[ConfigApp::$SECTION]=="borrar_novedad") {
+  $controlador->borrarNovedad();
+}
 elseif (($_REQUEST[ConfigApp::$SECTION]=="novedades-admin") || ($_REQUEST[ConfigApp::$SECTION]=="novedades"))
 {
   $controlador->mostrarNovedades($_REQUEST[ConfigApp::$SECTION]);

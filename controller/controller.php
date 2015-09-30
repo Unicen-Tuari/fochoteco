@@ -43,6 +43,18 @@ REQUIRE_ONCE('model/model.php');
 				//Comprobar si estan seteados.
 				$this->model->addNew($_REQUEST['dropdown'], $_REQUEST['nuevoTitulo'], $_REQUEST['nuevaDescripcion'], $_REQUEST['nuevaNoticia'], $_FILES['nuevasImgsNoticia']);
 			}
+			function agregarImagenes()
+			{
+      	$this->modelo->addImgs($_REQUEST['id'],$_FILES["imagesToUpload2"]);
+  		}
+			function borrarNovedad(){
+		    if(isset($_REQUEST['id'])){
+		      $this->model->deleteNew($_REQUEST['id']);
+		    }
+		    else{
+		      $this->view->mostrarError('La tarea que intenta borrar no existe');
+		    }
+		  }
 	}
 
 ?>

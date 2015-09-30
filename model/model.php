@@ -105,9 +105,20 @@ function addNew($id_categoria, $titulo, $descripcion, $noticia, $imagenes){
     }
 }
 
-// function addImgs(){
-//
-// }
+function addImgs($id_novedad, $imagenes){
+      $rutas=$this->subirImagenes($imagenes);
+      $consulta = $this->db->prepare('INSERT INTO imagen(fk_id_novedad, ruta) VALUES(?,?)');
+      foreach($rutas as $ruta){
+        $consulta->execute(array($id_novedad, $ruta));
+      }
+  }
+
+function deleteNew($id_novedad){
+    $consultaImgs = $this->db->prepare('DELETE FROM imagen WHERE fk_id_novedad=?');
+    $consultaImgs->execute(array($id_novedad));
+    $consultaNew = $this->db->prepare('DELETE FROM novedad WHERE id_novedad=?');
+    $consultaNew->execute(array($id_novedad));
+  }
 
 }
 

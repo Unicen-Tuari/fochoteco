@@ -6,6 +6,8 @@
           {foreach $novedad['imagenes'] as $imagen}
           <div class="col-sm-3">
           <img src="{$imagen}" alt="{$imagen}" class="img-thumbnail"/>
+          <a class="glyphicon glyphicon-plus botonAgregarImagenes" href="{$novedad['id_novedad']}"></a>
+          <a class="glyphicon glyphicon-trash eliminarNovedad" href="{$novedad['id_novedad']}"></a>
           </div>
           {/foreach}
           <div class="col-sm-9">
