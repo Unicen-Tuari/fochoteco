@@ -75,7 +75,6 @@ $('document').ready(function(){
 	};
 
 
-
 	function eliminarProducto(prod){
 	    $.ajax({
 	      type: "DELETE",
@@ -88,7 +87,6 @@ $('document').ready(function(){
 	      },
 	    });
 	  };
-
 
 	  $(".eliminarNovedad").on("click", function(event){
 	    event.preventDefault();

@@ -9,27 +9,27 @@ if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 {
   $controlador->showSection(ConfigApp::$SECTION_HOME);
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_imagenes") {
+elseif ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$AGREGAR_IMAGENES) {
   $controlador->agregarImagenes();
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="borrar_novedad") {
+elseif ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$BORRAR_NOVEDAD) {
   $controlador->borrarNovedad();
 }
-elseif (($_REQUEST[ConfigApp::$SECTION]=="novedades-admin") || ($_REQUEST[ConfigApp::$SECTION]=="novedades"))
+elseif (($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$NOVEDADES_ADMIN) || ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$NOVEDADES))
 {
   $controlador->mostrarNovedades($_REQUEST[ConfigApp::$SECTION]);
 }
-elseif (($_REQUEST[ConfigApp::$SECTION]=="dropdown") || ($_REQUEST[ConfigApp::$SECTION]=="listacategorias"))
+elseif (($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$DROPDOWN) || ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$LISTA_CATEGORIAS))
 {
   $controlador->mostrarDropdown($_REQUEST[ConfigApp::$SECTION]);
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="noticia" && isset($_REQUEST['id'])) {
+elseif ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$NOTICIA && isset($_REQUEST['id'])) {
   $controlador->mostrarNoticia($_REQUEST[ConfigApp::$SECTION],$_REQUEST['id']);
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_noticia") {
+elseif ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$AGREGAR_NOTICIA) {
   $controlador->agregarNuevaNoticia();
 }
-elseif ($_REQUEST[ConfigApp::$SECTION]=="agregar_categoria") {
+elseif ($_REQUEST[ConfigApp::$SECTION]==ConfigApp::$AGREGAR_CATEGORIA) {
   $controlador->agregarNuevaCategoria();
 }
 else
