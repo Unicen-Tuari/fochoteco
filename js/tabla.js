@@ -46,11 +46,13 @@ $.ajax({
     var imagen = "";
 		$("#bodytabla").html('');
     for (var i = 0; i < data.information.length; i++) {
+      if (i != 6){
        descripcion = data.information[i]['thing'][0];
        tamanio = data.information[i]['thing'][1];
        precio = data.information[i]['thing'][2];
 			 imagen = data.information[i]['thing'][3];
        $("#bodytabla").append("<tr><td>" + descripcion + "</td><td>" + tamanio + "</td><td>" + precio + '</td><td><img class="imgtabla hvr-grow" src="images/' + imagen + '"></td></tr>');
+    }
     }
  }
 });

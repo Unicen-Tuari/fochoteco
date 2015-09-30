@@ -45,8 +45,9 @@ $("#formAgregarCategoria").submit(function(event){
 					contentType : false,
 					processData : false,
 					success: function(){
-						cargarDropdown(dropdown);						
+						cargarDropdown(dropdown);
 						cargarCategorias(categorias);
+						$("#nuevaCategoria").val('');
 					},
 					error:function(){
 							alert("failure");

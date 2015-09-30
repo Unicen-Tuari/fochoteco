@@ -20,13 +20,26 @@ $('document').ready(function(){
 
 	cargarSeccion(novedades);
 
-// Lo voy a usar en un click futuro para agregar novedades.
-
-	// $('#nosotros').on('click', function(event){
-	// 	event.preventDefault();
-	// 	$(".nav").find(".active").removeClass("active");
-	// 	$(this).addClass("active");
-	// 	cargarSeccion(nosotros);
-	// });
+	$("#formAgregarNoticia").submit(function(event){
+	event.preventDefault();
+			$.ajax({
+					url: "index.php?section=agregar_noticia",
+					type: "post",
+					data: new FormData(this),
+					contentType : false,
+					processData : false,
+					success: function(data){
+						cargarSeccion(novedades);
+						$("#nuevoTitulo").val('');
+						$("#nuevaDescripcion").val('');
+						$("#nuevaNoticia").val('');
+						$("#nuevasImgsNoticia").val('');
+						$("#dropdown").val(0);
+					},
+					error:function(){
+							alert("failure");
+					}
+			});
+	});
 
 });

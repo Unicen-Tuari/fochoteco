@@ -1,21 +1,23 @@
-  <div class="row" style="margin-top: 50px; margin-left: 50px;">
+  <div class="row admNews" >
       <ul>
         {foreach $novedades as $novedad}
 
-        <li class="list-group-item col-sm-12" style="background-color: #ecf2ed;" >
+        <li class="list-group-item col-sm-12">
           {foreach $novedad['imagenes'] as $imagen}
-          <div class="col-sm-3" style="margin-top: 1%;">
-          <img src="{$imagen}" alt="{$imagen}" class="img-thumbnail" style="margin: auto; width: 100%;"/>
+          <div class="col-sm-3">
+          <img src="{$imagen}" alt="{$imagen}" class="img-thumbnail"/>
           </div>
           {/foreach}
           <div class="col-sm-9">
-            <h6 style="text-align: left; font-weight: bold; color: #021c01;"> Categoria: {$novedad['fk_id_categoria']} </h6>
-            <h3 style="font-weight: bold;">{$novedad['titulo']}</h3>
+            <h6> Categoria: {$novedad['fk_id_categoria']} </h6>
+            <h3>{$novedad['titulo']}</h3>
             {$novedad['descripcion']}
-            <h6 style="text-align: right; font-weight: bold; color: #002eb8;"> Ver noticia completa </h6>
+            <button value={$novedad['id_novedad']} class="verNoticia"><h6> Ver noticia completa </h6></button>
           </div>
         </li>
 
         {/foreach}
         </ul>
   </div>
+
+<script src="js/noticiaCompleta.js"></script>

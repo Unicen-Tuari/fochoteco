@@ -1,3 +1,29 @@
+<?php /* Smarty version 3.1.27, created on 2015-09-30 18:19:30
+         compiled from "C:\Xampp\htdocs\fochoteco\templates\admin.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:23443560c0b92b5a0e6_84389978%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '82a60907b23a1dbee2e55dcd96506e328459ebfa' => 
+    array (
+      0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\admin.tpl',
+      1 => 1443627746,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '23443560c0b92b5a0e6_84389978',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_560c0b92b988f1_49727538',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_560c0b92b988f1_49727538')) {
+function content_560c0b92b988f1_49727538 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '23443560c0b92b5a0e6_84389978';
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -77,10 +103,23 @@
   </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!-- jQuery -->
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/ajax-admin.js"></script>
-  <script src="js/dropdown.js"></script>
-  <script src="js/nueva-noticia.js"></script>
+  <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><?php echo '</script'; ?>
+> <!-- jQuery -->
+  <?php echo '<script'; ?>
+ src="js/bootstrap.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="js/ajax-admin.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="js/dropdown.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="js/nueva-noticia.js"><?php echo '</script'; ?>
+>
   </body>
 </html>
+<?php }
+}
+?>

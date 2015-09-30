@@ -40,7 +40,6 @@
       </table>
     </div>
   <button type="submit" class="btn" id="btn-agregar">Agregar</button>
-  <!--<button type="submit" class="btn">Actualizar</button> -->
 
   <script src="js/tabla.js"></script>
   </div>

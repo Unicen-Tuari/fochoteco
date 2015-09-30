@@ -36,9 +36,9 @@ function getNews(){
     $consultaCategoria->execute(array($novedad['fk_id_categoria']));
     $nombreCategoria = $consultaCategoria->fetchAll()[0];
     $novedad['fk_id_categoria'] = $nombreCategoria["nombre_categoria"];
-    $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=?");
+    $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=? ORDER BY id_imagen");
     $consultaImagen->execute(array($novedad['id_novedad']));
-    $pathImagen = $consultaImagen->fetchAll()[0];
+    $pathImagen = $consultaImagen->fetch();
     $novedad['imagenes'] = $pathImagen["ruta"];
     $novedades[]=$novedad;
   }
@@ -54,9 +54,9 @@ function getFullNew($id){
 
   $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=?");
   $consultaImagen->execute(array($id));
-  $pathImagen = $consultaImagen->fetchAll()[0];
-  $novedad['imagenes'] = $pathImagen["ruta"];
-
+  while($imagen = $consultaImagen->fetch(PDO::FETCH_ASSOC)) {
+    $novedad['imagenes'][] = $imagen["ruta"];
+  }
   return $novedad;
 }
 

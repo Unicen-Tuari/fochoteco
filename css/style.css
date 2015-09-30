@@ -264,6 +264,118 @@ color: #fff;
 }
 
 /*####################################################
+  #################  FULL NOTICIA ####################
+  ####################################################*/
+
+.fullNew {
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 15px;
+  border: 3px solid black;
+  line-height: 2;
+}
+
+.fullNew h6 {
+  text-align: right;
+  color: darkgreen;
+  font-weight: bold;
+}
+
+.fullNew img {
+  margin-top: 30px;
+  width: 85%;
+  border-radius: 10px;
+}
+
+.imgsNoticia {
+  width: 100%;
+  margin: 20px;
+}
+
+/*####################################################
+  ############## TODAS LAS NOTICIAS ##################
+  ####################################################*/
+
+.allNews {
+  margin-bottom: 20px;
+}
+
+.allNews button{
+  background-color: white;
+  border: 0px solid black;
+  color: #004507;
+  font-weight: bold;
+}
+
+.allNews img {
+   width: 75%;
+}
+
+.allNews h6 {
+  color: #004507;
+  text-align: right;
+}
+
+.allNews h6, .allNews h3 {
+  font-weight: bold;
+}
+
+.individualNew {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 1px solid black;
+}
+
+/*####################################################
+  #################  NOTICIAS ADM ####################
+  ####################################################*/
+
+.admNews {
+  margin-top: 50px; margin-left: 50px;
+}
+
+.admNews img {
+   width:100%;
+}
+
+.admNews h6, .admNews h3 {
+  font-weight: bold;
+}
+
+.admNews li {
+  background-color: #ecf2ed;
+}
+
+.admNews button{
+  background-color: #ecf2ed;
+  border: 0px solid black;
+  color: #004507;
+  font-weight: bold;
+}
+
+.admNews h6 {
+  color: #004507;
+  text-align: right;
+}
+
+.admNews button:hover {
+  color: #ffffff;
+}
+
+.panelAdmin {
+  background-color: #ecf2ed;
+  margin-top: 50px;
+  margin-left: 10px;
+  border-radius: 4px;
+}
+
+.panelAdmin form
+{
+  margin-top: 30px;
+  text-align:center;
+}
+
+/*####################################################
   #################  JUEGO DADOS #####################
   ####################################################*/
 

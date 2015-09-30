@@ -42,7 +42,6 @@ REQUIRE_ONCE('model/model.php');
 			{
 				//Comprobar si estan seteados.
 				$this->model->addNew($_REQUEST['dropdown'], $_REQUEST['nuevoTitulo'], $_REQUEST['nuevaDescripcion'], $_REQUEST['nuevaNoticia'], $_FILES['nuevasImgsNoticia']);
-				// $this->model->addImgs($_FILES['nuevasImgsNoticia']);
 			}
 	}
 
