@@ -33,7 +33,6 @@ $('document').ready(function(){
 			contentType : false,
 			processData : false,
 			success: function(data){
-				alert(data.result);
 			},
 			error: function(){
 				alert("Se rompio todo.");

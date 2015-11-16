@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 23:14:46
+<?php /* Smarty version 3.1.27, created on 2015-11-16 13:29:06
          compiled from "C:\Xampp\htdocs\fochoteco\templates\novedades-admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1476560c50c69c3c28_60469043%%*/
+/*%%SmartyHeaderCode:224935649cc124fc433_72040387%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1476560c50c69c3c28_60469043',
+  'nocache_hash' => '224935649cc124fc433_72040387',
   'variables' => 
   array (
     'novedades' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560c50c6a00b25_93907160',
+  'unifunc' => 'content_5649cc125949d0_91341726',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560c50c6a00b25_93907160')) {
-function content_560c50c6a00b25_93907160 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5649cc125949d0_91341726')) {
+function content_5649cc125949d0_91341726 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1476560c50c69c3c28_60469043';
+$_smarty_tpl->properties['nocache_hash'] = '224935649cc124fc433_72040387';
 ?>
   <div class="row admNews" >
       <ul>

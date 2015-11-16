@@ -55,4 +55,25 @@ $("#formAgregarCategoria").submit(function(event){
 			});
 });
 
+function eliminarCat(categ){
+		$.ajax({
+			type: "DELETE",
+			url:"index.php?section=borrar_categoria&id=" + categ,
+			success: function(data){
+					cargarCategorias("listacategorias");
+			},
+			error: function(){
+				alert("No anduvo la llamada AJAX");
+			},
+		});
+	};
+
+	$(".eliminarCategoria").on("click", function(event){
+		event.preventDefault();
+		id_categoria=event.target.href;
+		var posbarra= id_categoria.lastIndexOf("/");
+		id_categoria = id_categoria.substr(posbarra+1);
+		eliminarCat(id_categoria);
+	});
+
 });

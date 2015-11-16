@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 23:14:46
+<?php /* Smarty version 3.1.27, created on 2015-11-16 13:29:06
          compiled from "C:\Xampp\htdocs\fochoteco\templates\dropdown.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:4206560c50c69c3c20_31258537%%*/
+/*%%SmartyHeaderCode:81405649cc125273c1_98910636%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '03906efed1ebceaf4d266c66ad4e527870ba27dc' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\dropdown.tpl',
-      1 => 1443510962,
+      1 => 1447242934,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4206560c50c69c3c20_31258537',
+  'nocache_hash' => '81405649cc125273c1_98910636',
   'variables' => 
   array (
     'categorias' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560c50c6a3da28_26725859',
+  'unifunc' => 'content_5649cc125daee7_68080764',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560c50c6a3da28_26725859')) {
-function content_560c50c6a3da28_26725859 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5649cc125daee7_68080764')) {
+function content_5649cc125daee7_68080764 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '4206560c50c69c3c20_31258537';
+$_smarty_tpl->properties['nocache_hash'] = '81405649cc125273c1_98910636';
 if (!empty($_smarty_tpl->tpl_vars['categorias']->value)) {?>
   <option value="0">Categorias</option>
   <?php

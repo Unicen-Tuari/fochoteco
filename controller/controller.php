@@ -2,16 +2,20 @@
 
 REQUIRE_ONCE('view/view.php');
 REQUIRE_ONCE('model/model.php');
+REQUIRE_ONCE('model/categoria_model.php');
+REQUIRE_ONCE('model/novedad_model.php');
 
 	class Controller
   {
-			private $view;
-			private $model;
+			protected $view;
+			protected $model;
 
 			function __construct()
 	    {
 				$this->view = new View();
 				$this->model = new Model();
+				$this->cat_model = new Categoria_model();
+				$this->nov_model = new Novedad_model();
 			}
 
 			function showSection($section)
@@ -19,42 +23,15 @@ REQUIRE_ONCE('model/model.php');
 				$this->view->showTemplate($section);
 			}
 
-			function mostrarNovedades($section)
+			function mostrarNovedades()
 			{
-	    $this->view->showNews($section, $this->model->getNews());
+	    $this->view->showNews($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getNews());
 	  	}
 
-			function mostrarNoticia($section, $id)
+			function mostrarNoticia()
 			{
-
-	    $this->view->showFullNew($section, $this->model->getFullNew($id));
+	    $this->view->showFullNew($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getFullNew($_REQUEST['id']));
 	  	}
-
-			function mostrarDropdown($section)
-			{
-				$this->view->showDropdown($section, $this->model->getCategories());
-			}
-			function agregarNuevaCategoria()
-			{
-				$this->model->addCategoria($_REQUEST['nuevaCategoria']);			 //Id del input de la nueva categoria a agregar
-			}
-			function agregarNuevaNoticia()
-			{
-				//Comprobar si estan seteados.
-				$this->model->addNew($_REQUEST['dropdown'], $_REQUEST['nuevoTitulo'], $_REQUEST['nuevaDescripcion'], $_REQUEST['nuevaNoticia'], $_FILES['nuevasImgsNoticia']);
-			}
-			function agregarImagenes()
-			{
-      	$this->modelo->addImgs($_REQUEST['id'],$_FILES["imagesToUpload2"]);
-  		}
-			function borrarNovedad(){
-		    if(isset($_REQUEST['id'])){
-		      $this->model->deleteNew($_REQUEST['id']);
-		    }
-		    else{
-		      $this->view->mostrarError('La tarea que intenta borrar no existe');
-		    }
-		  }
 	}
 
 ?>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-09-30 23:23:09
+<?php /* Smarty version 3.1.27, created on 2015-11-16 13:57:39
          compiled from "C:\Xampp\htdocs\fochoteco\templates\noticia.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:24581560c52bdf28674_06259175%%*/
+/*%%SmartyHeaderCode:284985649d2c3ab1334_24400473%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -13,7 +13,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '24581560c52bdf28674_06259175',
+  'nocache_hash' => '284985649d2c3ab1334_24400473',
   'variables' => 
   array (
     'novedad' => 0,
@@ -22,13 +22,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_560c52be09cf78_98550467',
+  'unifunc' => 'content_5649d2c3b60fd0_67560841',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_560c52be09cf78_98550467')) {
-function content_560c52be09cf78_98550467 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5649d2c3b60fd0_67560841')) {
+function content_5649d2c3b60fd0_67560841 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '24581560c52bdf28674_06259175';
+$_smarty_tpl->properties['nocache_hash'] = '284985649d2c3ab1334_24400473';
 ?>
 <div class="container-fluid">
   <div class="row">
