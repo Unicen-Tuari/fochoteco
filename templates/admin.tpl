@@ -26,6 +26,7 @@
     <form class="form-horizontal" id="formAgregarNoticia">
 
               <select id="dropdown" name="dropdown">
+                <option value="0">Categorias</option>
               </select>
 
               <div class="form-group">
@@ -76,14 +77,39 @@
 
   </div>
 
-  <div id="listacategorias" class="col-sm-5" style="background-color: white; margin-left: 10px; margin-top: 10px; border-radius:5px;">
+  <div id="listacategorias" class="col-sm-5">
+    <label class="control-label" for="nombre">Categorias</label>
+    <ul class="col-sm-12" id="listaCategorias1">
+
+    </ul>
 
   </div>
 
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script> <!-- jQuery -->
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
+        </div>
+        <input name="name" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="nuevoNombreCat" name="nuevoNombreCat">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/mustache.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ajax-admin.js"></script>
   <script src="js/dropdown.js"></script>
+  <script src="js/updateModal.js"></script>
+
+
   </body>
 </html>

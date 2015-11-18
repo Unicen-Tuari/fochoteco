@@ -22,33 +22,14 @@ else {
 				$adm_controller->borrarNovedad();
 				break;
 
-      case ConfigApp::$BORRAR_CATEGORIA:
-				$adm_controller->borrarCategoria();
-				break;
-
       case ConfigApp::$NOVEDADES_ADMIN:
 			// Carga las novedades en el panel de admin
 				$controlador->mostrarNovedades();
 				break;
 
-      case ConfigApp::$AGREGAR_CATEGORIA:
-			// Carga las novedades en el panel de admin
-				$adm_controller->agregarNuevaCategoria();
-				break;
-
       case ConfigApp::$NOVEDADES:
       // Carga las novedades en la pagina
         $controlador->mostrarNovedades();
-        break;
-
-      case ConfigApp::$DROPDOWN:
-      // Carga el dropdown en el panel de admin
-        $adm_controller->mostrarDropdown();
-        break;
-
-      case ConfigApp::$LISTA_CATEGORIAS:
-      // Carga la lista de categorias en el panel admin
-        $adm_controller->mostrarDropdown();
         break;
 
       case ConfigApp::$NOTICIA:

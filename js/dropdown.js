@@ -2,78 +2,108 @@
 
 $('document').ready(function(){
 
-	var dropdown = "dropdown";
-	var categorias = "listacategorias";
-
-function cargarDropdown(seccion){
-	$.ajax({
-		type: 'GET',
-		dataType: 'HTML',
-		url: 'index.php?section='+seccion,
-		success: function(data){
-					$('#dropdown').html(data);
-				},
-		error: function(){
-					alert('Error al Cargar la Pagina de ' + seccion);
-				}
-	});
-};
-
-function cargarCategorias(seccion){
-	$.ajax({
-		type: "GET",
-		dataType: "html",
-		url: 'index.php?section=' + seccion,
-		success: function(data){
-			$("#listacategorias").html(data);
-		},
-		error: function(){
-			alert("error");
-		}
-	})
-};
-
-cargarDropdown(dropdown);
-cargarCategorias(categorias);
-
 $("#formAgregarCategoria").submit(function(event){
 	event.preventDefault();
-			$.ajax({
-					url: "index.php?section=agregar_categoria",
-					type: "post",
-					data: new FormData(this),
-					contentType : false,
-					processData : false,
-					success: function(){
-						cargarDropdown(dropdown);
-						cargarCategorias(categorias);
-						$("#nuevaCategoria").val('');
-					},
-					error:function(){
-							alert("failure");
-					}
-			});
+	var nombreCategoria = $('#nuevaCategoria').val();
+	if (nombreCategoria.length > 4){
+		$.ajax(
+	    {
+	      method: "POST",
+	      url: "api/categorias",
+	      data: { categoria: nombreCategoria }
+	    })
+	  .done(function(idCategoria) {
+	    var categoria = {nombre_categoria: nombreCategoria, id_categoria:idCategoria  };
+	     crearCategoria(categoria);
+			 crearDropdown(categoria);
+	     $('#nuevaCategoria').val('');
+	  })
+	  .fail(function() {
+	      $('#listaCategorias1').append('<li>Imposible agregar la tarea</li>');
+	  });
+	}
 });
 
-function eliminarCat(categ){
-		$.ajax({
-			type: "DELETE",
-			url:"index.php?section=borrar_categoria&id=" + categ,
-			success: function(data){
-					cargarCategorias("listacategorias");
-			},
-			error: function(){
-				alert("No anduvo la llamada AJAX");
-			},
-		});
-	};
 
-	$(".eliminarCategoria").on("click", function(event){
-		event.preventDefault();
-		id_categoria=event.target.href;
-		var posbarra= id_categoria.lastIndexOf("/");
-		id_categoria = id_categoria.substr(posbarra+1);
-		eliminarCat(id_categoria);
-	});
+function crearCategoria(categoria) {
+  $.ajax({ url: 'js/templates/listacategorias.mst',
+     success: function(template) {
+       var rendered = Mustache.render(template, categoria);
+       $('#listaCategorias1').append(rendered);
+      }
+    });
+}
+
+function crearDropdown(categoria){
+	$.ajax({ url: 'js/templates/dropdown.mst',
+     success: function(template) {
+       var rendered = Mustache.render(template, categoria);
+       $('#dropdown').append(rendered);
+      }
+    });
+}
+
+function cargarCategorias(){
+  $.ajax( "api/categorias" )
+  .done(function(categoriasJSN) {
+    for(var key in categoriasJSN) {
+      crearCategoria(categoriasJSN[key]);
+			crearDropdown(categoriasJSN[key]);
+    }
+  })
+  .fail(function() {
+			alert("error");
+      // $('#listaTareas').append('<li>Imposible cargar la lista de tareas</li>');
+  });
+}
+
+function borrarCategoria(idCategoria){
+  $.ajax(
+    {
+      method: "DELETE",
+      url: "api/categorias/" + idCategoria
+    })
+  .done(function() {
+     $('#categoria'+idCategoria).remove();
+	    $('#drop'+idCategoria).remove();
+  })
+  .fail(function() {
+      alert('Imposible borrar la tarea');
+  });
+}
+
+$('body').on('click', 'a.eliminarCategoria', function() {
+  var idCategoria = this.getAttribute('idcat');
+  borrarCategoria(idCategoria);
+});
+
+
+function actualizarCategoria(idCategoria){
+  $.ajax(
+    {
+      method: "PUT",
+      url: "api/categorias/" + idCategoria
+    })
+  .done(function() {
+    // $('#listaTareas').html="";
+  })
+  .fail(function() {
+      alert('Imposible realizar la tarea');
+  });
+}
+
+$('body').on('click', 'a.actualizarCategoria', function() {
+  var idCategoria = this.getAttribute('idcat');
+  actualizarCategoria(idCategoria);
+});
+
+// $('body').on('click', 'div.nuevoNombreCat', function() {
+//   var nuevoNombre = this.getAttribute('idcat');
+//   actualizarCategoria(idCategoria);
+// });
+
+
+cargarCategorias();
+
 
 });

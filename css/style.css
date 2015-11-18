@@ -394,6 +394,13 @@ color: #fff;
   text-align:center;
 }
 
+#listacategorias {
+background-color: white;
+margin-left: 10px;
+margin-top: 10px;
+border-radius:5px;
+}
+
 /*####################################################
   #################  JUEGO DADOS #####################
   ####################################################*/

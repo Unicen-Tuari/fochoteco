@@ -1,5 +1,7 @@
 <?php
 
+require_once 'model.php';
+
 class Novedad_model extends Model {
 
   private $novedades;

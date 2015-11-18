@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-16 13:29:06
+<?php /* Smarty version 3.1.27, created on 2015-11-18 14:50:12
          compiled from "C:\Xampp\htdocs\fochoteco\templates\admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:175505649cc12058b28_68528836%%*/
+/*%%SmartyHeaderCode:25799564c82143ad3f9_02465861%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '82a60907b23a1dbee2e55dcd96506e328459ebfa' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\admin.tpl',
-      1 => 1447243203,
+      1 => 1447853330,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '175505649cc12058b28_68528836',
+  'nocache_hash' => '25799564c82143ad3f9_02465861',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5649cc1209f035_43382822',
+  'unifunc' => 'content_564c82143efa87_10525075',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5649cc1209f035_43382822')) {
-function content_5649cc1209f035_43382822 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_564c82143efa87_10525075')) {
+function content_564c82143efa87_10525075 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '175505649cc12058b28_68528836';
+$_smarty_tpl->properties['nocache_hash'] = '25799564c82143ad3f9_02465861';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -52,6 +52,7 @@ $_smarty_tpl->properties['nocache_hash'] = '175505649cc12058b28_68528836';
     <form class="form-horizontal" id="formAgregarNoticia">
 
               <select id="dropdown" name="dropdown">
+                <option value="0">Categorias</option>
               </select>
 
               <div class="form-group">
@@ -102,14 +103,38 @@ $_smarty_tpl->properties['nocache_hash'] = '175505649cc12058b28_68528836';
 
   </div>
 
-  <div id="listacategorias" class="col-sm-5" style="background-color: white; margin-left: 10px; margin-top: 10px; border-radius:5px;">
+  <div id="listacategorias" class="col-sm-5">
+    <label class="control-label" for="nombre">Categorias</label>
+    <ul class="col-sm-12" id="listaCategorias1">
+
+    </ul>
 
   </div>
 
 
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
+        </div>
+        <input name="name" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="nuevoNombreCat" name="nuevoNombreCat">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <?php echo '<script'; ?>
- src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><?php echo '</script'; ?>
-> <!-- jQuery -->
+ src="js/mustache.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"><?php echo '</script'; ?>
+>
   <?php echo '<script'; ?>
  src="js/bootstrap.min.js"><?php echo '</script'; ?>
 >
@@ -119,6 +144,11 @@ $_smarty_tpl->properties['nocache_hash'] = '175505649cc12058b28_68528836';
   <?php echo '<script'; ?>
  src="js/dropdown.js"><?php echo '</script'; ?>
 >
+  <?php echo '<script'; ?>
+ src="js/updateModal.js"><?php echo '</script'; ?>
+>
+
+
   </body>
 </html>
 <?php }
