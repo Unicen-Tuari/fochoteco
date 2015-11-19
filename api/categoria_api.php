@@ -13,7 +13,12 @@ class CategoriaApi extends ApiBase {
   function categorias(){
     switch ($this->method) {
       case 'GET':
-        return $this->model->getCategories();
+        if(count($this->args) < 1){
+          return $this->model->getCategories();
+        }
+        else {
+            return $this->model->getNameCat($this->args[0]);
+          };
         break;
       case 'DELETE':
         if(count($this->args) > 0) return $this->model->deleteCategoria($this->args[0]);
@@ -22,7 +27,7 @@ class CategoriaApi extends ApiBase {
         if(isset($_POST['categoria'])) return $this->model->addCategoria($_POST['categoria']);
         break;
       case 'PUT':
-        if(count($this->args) > 0) return $this->model->updateCategoria($this->args[0], $this->args[1]);
+        if(count($this->args) > 0) return $this->model->updateCategoria($this->args[0], $this->data->nombre);
         break;
       default:
             return 'Verbo no soportado';

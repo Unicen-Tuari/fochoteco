@@ -10,8 +10,13 @@ class Categoria_model extends Model {
   function getCategories(){
     $consulta = $this->db->prepare("SELECT * FROM categoria");
     $consulta->execute();
-
     return $consulta->fetchAll();
+  }
+
+  function getNameCat($id_categoria){
+    $consulta = $this->db->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria=?");
+    $consulta->execute(array($id_categoria));
+    return $consulta->fetch()["nombre_categoria"];
   }
 
   function addCategoria($categoria){

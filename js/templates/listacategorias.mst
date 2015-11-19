@@ -1,7 +1,6 @@
 <li id="categoria{{id_categoria}}">
-  <p>Id categoria: {{id_categoria}}</p>
-  <p>Nombre categoria: {{nombre_categoria}}
-    <a class="glyphicon glyphicon-trash eliminarCategoria" idcat="{{id_categoria}}"></a>
-    <a class="glyphicon glyphicon-edit actualizarCategoria" data-toggle="modal" data-target="#myModal" idcat="{{id_categoria}}"></a>
-  </p>
+  <p>Id categoria: {{id_categoria}}
+  <a class="glyphicon glyphicon-trash eliminarCategoria" idcat="{{id_categoria}}"></a>
+  <a class="glyphicon glyphicon-edit actualizarCategoria" data-toggle="modal" data-target="#myModal" idcatmod="{{id_categoria}}"></a></p>
+  <p id="nombre{{id_categoria}}">Nombre categoria: {{nombre_categoria}}  </p>
 </li>

@@ -94,10 +94,10 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
         </div>
-        <input name="name" value="">
+        <input id="nuevoNombreCat" name="nuevoNombreCat" value="">
         <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" id="nuevoNombreCat" name="nuevoNombreCat">Save changes</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>
         </div>
       </div>
     </div>
@@ -108,7 +108,6 @@
   <script src="js/bootstrap.min.js"></script>
   <script src="js/ajax-admin.js"></script>
   <script src="js/dropdown.js"></script>
-  <script src="js/updateModal.js"></script>
 
 
   </body>

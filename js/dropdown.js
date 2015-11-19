@@ -2,6 +2,8 @@
 
 $('document').ready(function(){
 
+var idCateg = '';
+
 $("#formAgregarCategoria").submit(function(event){
 	event.preventDefault();
 	var nombreCategoria = $('#nuevaCategoria').val();
@@ -27,6 +29,7 @@ $("#formAgregarCategoria").submit(function(event){
 
 function crearCategoria(categoria) {
   $.ajax({ url: 'js/templates/listacategorias.mst',
+	async:false,
      success: function(template) {
        var rendered = Mustache.render(template, categoria);
        $('#listaCategorias1').append(rendered);
@@ -36,6 +39,7 @@ function crearCategoria(categoria) {
 
 function crearDropdown(categoria){
 	$.ajax({ url: 'js/templates/dropdown.mst',
+	async:false,
      success: function(template) {
        var rendered = Mustache.render(template, categoria);
        $('#dropdown').append(rendered);
@@ -73,19 +77,23 @@ function borrarCategoria(idCategoria){
 }
 
 $('body').on('click', 'a.eliminarCategoria', function() {
+	event.preventDefault();
   var idCategoria = this.getAttribute('idcat');
   borrarCategoria(idCategoria);
 });
 
 
-function actualizarCategoria(idCategoria){
+function actualizarCategoria(idCategoria, name){
+	var categoria={nombre: name};
   $.ajax(
     {
       method: "PUT",
-      url: "api/categorias/" + idCategoria
+      url: "api/categorias/" + idCategoria,
+			dataType: 'json',
+			data: JSON.stringify(categoria)
     })
   .done(function() {
-    // $('#listaTareas').html="";
+		$('#nombre'+idCategoria).html("Nombre categoria: "+name);
   })
   .fail(function() {
       alert('Imposible realizar la tarea');
@@ -93,14 +101,22 @@ function actualizarCategoria(idCategoria){
 }
 
 $('body').on('click', 'a.actualizarCategoria', function() {
-  var idCategoria = this.getAttribute('idcat');
-  actualizarCategoria(idCategoria);
+	event.preventDefault();
+	idCateg = this.getAttribute('idcatmod');
+	$.ajax( "api/categorias/"+idCateg )
+	    .done(function(nombreCat) {
+				$('#nuevoNombreCat').val(nombreCat);
+	    })
+	    .fail(function() {
+	        alert("no se pudo obtener nombre categoria");
+	    });
 });
 
-// $('body').on('click', 'div.nuevoNombreCat', function() {
-//   var nuevoNombre = this.getAttribute('idcat');
-//   actualizarCategoria(idCategoria);
-// });
+$('#guardarNombreCat').on('click', function() {
+	event.preventDefault();
+  var newName = $('#nuevoNombreCat').val();
+	actualizarCategoria(idCateg, newName);
+});
 
 
 cargarCategorias();
