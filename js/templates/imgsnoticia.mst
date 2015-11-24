@@ -1,3 +1,4 @@
-<div class="col-sm-4">
+<div id="img{{id_imagen}}" class="col-sm-4">
 <img src="{{ruta}}" alt="{{ruta}}" class="imgsNoticia"/>
+<a class="glyphicon glyphicon-trash eliminarImg" idImg="{{id_imagen}}"></a>
 </div>

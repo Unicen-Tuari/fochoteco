@@ -114,13 +114,13 @@
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
         </div>
-        <select id="dropdown" name="dropdown"><option value="0">Categorias</option><option value="1">Categorias1</option></select>
+        <select id="dropdown2" name="dropdown2"><option value="0">Categorias</option></select>
         <h4>Titulo: </h4><input id="actualizarTitulo" name="actualizarTitulo" value="">
-        <h4>Descripcion: </h4><input id="actualizarDescripcion" name="actualizarDescripcion" value="">
-        <h4>Noticia: </h4><input id="actualizarNoticia" name="actualizarNoticia" value="">
+        <h4>Descripcion: </h4><textarea id="actualizarDescripcion" name="actualizarDescripcion" rows="5" cols="80" value=""></textarea>
+        <h4>Noticia: </h4><textarea id="actualizarNoticia" name="actualizarNoticia" rows="10" cols="80" value=""></textarea>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-primary" id="guardarNoticia" name="guardarNoticia" data-dismiss="modal">Guardar</button>
         </div>
       </div>
     </div>

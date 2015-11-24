@@ -48,7 +48,50 @@ $("#formAgregarNoticia").submit(function(event){
 	  borrarNovedad(idNovedad);
 	});
 
+//ACTUALIZAR UNA NOTICIA
+var idNovedad = '';
+$('body').on('click', 'a.actualizarNovedad', function() {
+	event.preventDefault();
+	idNovedad = this.getAttribute('idNovMod');
+	$.ajax( "api/noticia/" + idNovedad )
+	    .done(function(novedad) {
+				$('#actualizarTitulo').val(novedad['titulo']);
+        $('#actualizarDescripcion').val(novedad['descripcion']);
+        $('#actualizarNoticia').val(novedad['noticia']);
+				$('#dropdown2').val(novedad['id_categ']);
+	    })
+	    .fail(function() {
+	        alert("no se pudo obtener novedad");
+	    });
+});
 
+function modificarNoticia(nuevoTitulo, nuevaDescripcion, nuevaNoticia, nuevaCategoria){
+	var novedad = {fk_id_categoria: nuevaCategoria, titulo: nuevoTitulo, descripcion: nuevaDescripcion, noticia: nuevaNoticia};
+	$.ajax(
+		{
+			method: "PUT",
+			url: "api/noticia/" + idNovedad,
+			dataType: "json",
+			data: JSON.stringify(novedad)
+		})
+	.done(function(nombreCategoria) {
+		$('#idCategoria'+idNovedad).html("Categoria: " + nombreCategoria);
+		$('#idTitulo'+idNovedad).html(nuevoTitulo);
+		$('#idDescripcion'+idNovedad).html(nuevaDescripcion);
+	})
+	.fail(function() {
+			alert('Imposible modificar noticia');
+	});
+}
+
+$("#guardarNoticia").on("click", function(event){
+    event.preventDefault();
+    var nuevoTitulo = $('#actualizarTitulo').val();
+    var nuevaDescripcion = $('#actualizarDescripcion').val();
+    var nuevaNoticia=$('#actualizarNoticia').val();
+		var nuevaCategoria = $('#dropdown2').val();
+    modificarNoticia(nuevoTitulo,nuevaDescripcion,nuevaNoticia,nuevaCategoria)
+  });
 //AGREGAR IMAGENES A UNA NOTICIA
 	var id_novedadImg = '';
 
@@ -119,19 +162,29 @@ $('body').on('click', '.verNoticia', function() {
 	event.preventDefault();
 	var id_novedad = $(this).val();
 	cargarNovedad(id_novedad);
-	// $('#contadmin').remove();
-	// noticiaCompleta(id_novedad);
 });
 
-// function noticiaCompleta(noticia) {
-// 	$.ajax({ url: 'js/templates/noticia.mst',
-// 	async:false,
-// 		 success: function(template) {
-// 			 var rendered = Mustache.render(template, noticia);
-// 			 $('#contadmin1').append(rendered);
-// 			}
-// 		});
-// }
+//ELIMINAR UNA IMAGEN DE UNA NOTICIA
+
+function deleteImg(idImg){
+	$.ajax(
+		{
+			method: "DELETE",
+			url: "api/noticia/img/" + idImg
+		})
+	.done(function() {
+		 $('#img'+idImg).remove();
+	})
+	.fail(function() {
+			alert('Imposible borrar la imagen');
+	});
+}
+
+$('#contadmin').on('click', 'a.eliminarImg', function() {
+	var id_Img = this.getAttribute("idImg");
+
+	deleteImg(id_Img);
+});
 
 //LISTAR NOTICIAS
 	function crearNovedad(noticia) {

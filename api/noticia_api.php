@@ -23,7 +23,12 @@ class NoticiaApi extends ApiBase {
         break;
 
       case 'DELETE':
+      if(count($this->args) < 2){
         if(count($this->args) > 0) return $this->model->deleteNew($this->args[0]);
+      }
+      else {
+        return $this->model->deleteImage($this->args[1]);
+      }
         break;
 
       case 'POST':
@@ -40,7 +45,8 @@ class NoticiaApi extends ApiBase {
         break;
 
       case 'PUT':
-        if(count($this->args) > 0) return $this->model->updateNoticia($this->args[0], $this->data->nombre);
+      if(count($this->args) > 0)
+        return $this->model->updateNoticia($this->args[0], $this->data->fk_id_categoria, $this->data->titulo, $this->data->descripcion, $this->data->noticia);
         break;
 
       default:

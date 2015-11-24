@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-24 04:39:13
+<?php /* Smarty version 3.1.27, created on 2015-11-24 16:00:47
          compiled from "C:\Xampp\htdocs\fochoteco\templates\admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:3045653dbe19db474_32413071%%*/
+/*%%SmartyHeaderCode:849356547b9fd8ecf7_47222803%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '82a60907b23a1dbee2e55dcd96506e328459ebfa' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\admin.tpl',
-      1 => 1448336352,
+      1 => 1448377247,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3045653dbe19db474_32413071',
+  'nocache_hash' => '849356547b9fd8ecf7_47222803',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5653dbe1a29685_18329851',
+  'unifunc' => 'content_56547b9fdcd504_52902213',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5653dbe1a29685_18329851')) {
-function content_5653dbe1a29685_18329851 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56547b9fdcd504_52902213')) {
+function content_56547b9fdcd504_52902213 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '3045653dbe19db474_32413071';
+$_smarty_tpl->properties['nocache_hash'] = '849356547b9fd8ecf7_47222803';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -140,13 +140,13 @@ $_smarty_tpl->properties['nocache_hash'] = '3045653dbe19db474_32413071';
           <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
           <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
         </div>
-        <select id="dropdown" name="dropdown"><option value="0">Categorias</option><option value="1">Categorias1</option></select>
+        <select id="dropdown2" name="dropdown2"><option value="0">Categorias</option></select>
         <h4>Titulo: </h4><input id="actualizarTitulo" name="actualizarTitulo" value="">
-        <h4>Descripcion: </h4><input id="actualizarDescripcion" name="actualizarDescripcion" value="">
-        <h4>Noticia: </h4><input id="actualizarNoticia" name="actualizarNoticia" value="">
+        <h4>Descripcion: </h4><textarea id="actualizarDescripcion" name="actualizarDescripcion" rows="5" cols="80" value=""></textarea>
+        <h4>Noticia: </h4><textarea id="actualizarNoticia" name="actualizarNoticia" rows="10" cols="80" value=""></textarea>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>
+          <button type="button" class="btn btn-primary" id="guardarNoticia" name="guardarNoticia" data-dismiss="modal">Guardar</button>
         </div>
       </div>
     </div>

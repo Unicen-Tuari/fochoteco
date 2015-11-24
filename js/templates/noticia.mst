@@ -7,7 +7,7 @@
           </div>
 
            <h1>{{titulo}}</h2>
-           {{noticia}}
+           <p>{{noticia}}</p>
 
            <div id="imgsNovedad"> </div>
            <h6>Fecha de publicacion: {{fecha_publicacion}}</h6>

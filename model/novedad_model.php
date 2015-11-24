@@ -35,9 +35,11 @@ class Novedad_model extends Model {
     $consultaCategoria = $this->db->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria=?");
     $consultaCategoria->execute(array($novedad['fk_id_categoria']));
     $nombreCategoria = $consultaCategoria->fetch();
+
+    $novedad['id_categ'] = $novedad['fk_id_categoria']; //para el dropdown2
     $novedad['fk_id_categoria'] = $nombreCategoria["nombre_categoria"];
 
-    $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=?");
+    $consultaImagen = $this->db->prepare("SELECT * FROM imagen WHERE fk_id_novedad=?");
     $consultaImagen->execute(array($id));
     while($imagen = $consultaImagen->fetch(PDO::FETCH_ASSOC)) {
       $novedad['imagenes'][] = $imagen;
@@ -92,6 +94,18 @@ class Novedad_model extends Model {
       $consultaNew = $this->db->prepare('DELETE FROM novedad WHERE id_novedad=?');
       $consultaNew->execute(array($id_novedad));
     }
+
+  function updateNoticia($id_novedad, $id_categoria, $titulo, $descripcion, $noticia) {
+    $consulta = $this->db->prepare('UPDATE novedad SET titulo=?, descripcion=?, noticia=?, fk_id_categoria=? WHERE id_novedad=?');
+    $consulta->execute(array($titulo, $descripcion, $noticia, $id_categoria, $id_novedad));
+    $categoria_model = new Categoria_Model();
+    return $categoria_model->getNameCat($id_categoria);
+  }
+
+  function deleteImage($id_image) {
+    $consultaImgs = $this->db->prepare('DELETE FROM imagen WHERE id_imagen=?');
+    $consultaImgs->execute(array($id_image));
+  }
 
 
 }

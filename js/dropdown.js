@@ -43,6 +43,7 @@ function crearDropdown(categoria){
      success: function(template) {
        var rendered = Mustache.render(template, categoria);
        $('#dropdown').append(rendered);
+			 $('#dropdown2').append(rendered);
       }
     });
 }

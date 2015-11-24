@@ -8,9 +8,9 @@
   </div>
 
   <div class="col-sm-9">
-    <h6> Categoria: {{fk_id_categoria}} </h6>
-    <h3>{{titulo}}</h3>
-    {{descripcion}}
+    <h6 id="idCategoria{{id_novedad}}"> Categoria: {{fk_id_categoria}} </h6>
+    <h3 id="idTitulo{{id_novedad}}">{{titulo}}</h3>
+    <p id="idDescripcion{{id_novedad}}">{{descripcion}}</p>
     <button value={{id_novedad}} class="verNoticia"><h6> Ver noticia completa </h6></button>
   </div>
 
