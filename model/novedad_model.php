@@ -12,8 +12,6 @@ class Novedad_model extends Model {
     $consulta->execute();
     //Todas las novedades
     while($novedad = $consulta->fetch(PDO::FETCH_ASSOC)) {
-      // $consultaImagenes = $this->db->prepare("SELECT * FROM imagen where fk_id_tarea=?");
-      // $consultaImagenes->execute(array($tarea['id']));
       $consultaCategoria = $this->db->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria=?");
       $consultaCategoria->execute(array($novedad['fk_id_categoria']));
       $nombreCategoria = $consultaCategoria->fetchAll()[0];
@@ -34,10 +32,15 @@ class Novedad_model extends Model {
     $consultaNovedad->execute(array($id));
     $novedad = $consultaNovedad->fetch();
 
+    $consultaCategoria = $this->db->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria=?");
+    $consultaCategoria->execute(array($novedad['fk_id_categoria']));
+    $nombreCategoria = $consultaCategoria->fetch();
+    $novedad['fk_id_categoria'] = $nombreCategoria["nombre_categoria"];
+
     $consultaImagen = $this->db->prepare("SELECT ruta FROM imagen WHERE fk_id_novedad=?");
     $consultaImagen->execute(array($id));
     while($imagen = $consultaImagen->fetch(PDO::FETCH_ASSOC)) {
-      $novedad['imagenes'][] = $imagen["ruta"];
+      $novedad['imagenes'][] = $imagen;
     }
     return $novedad;
   }
@@ -48,7 +51,7 @@ class Novedad_model extends Model {
       $destinos_finales = array();
       foreach ($imagenes["tmp_name"] as $key => $value) {
         $destinos_finales[] = $carpeta.uniqid().$imagenes["name"][$key];
-        move_uploaded_file($value, end($destinos_finales));
+        move_uploaded_file($value, "../" . end($destinos_finales));
       }
       return $destinos_finales;
   }
@@ -56,17 +59,18 @@ class Novedad_model extends Model {
   function addNew($id_categoria, $titulo, $descripcion, $noticia, $imagenes){
     try
       {
-     $destinos_finales=$this->subirImagenes($imagenes);
+      $destinos_finales=$this->subirImagenes($imagenes);
       $this->db->beginTransaction();
       $queryInsert = $this->db->prepare('INSERT INTO novedad(titulo, descripcion, noticia, fk_id_categoria) VALUES(?,?,?,?)');
       $queryInsert->execute(array($titulo, $descripcion, $noticia, $id_categoria));
-     $id_producto = $this->db->lastInsertId();
+      $id_novedad = $this->db->lastInsertId();
       //Insertar las imagenes
      foreach ($destinos_finales as $key => $value) {
        $consulta = $this->db->prepare('INSERT INTO imagen(fk_id_novedad, ruta) VALUES(?,?)');
-       $consulta->execute(array($id_producto, $value));
+       $consulta->execute(array($id_novedad, $value));
       }
       $this->db->commit();
+      return $this->getFullNew($id_novedad);
       }
     catch(Exception $e)
       {

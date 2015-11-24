@@ -74,25 +74,27 @@ $('document').ready(function(){
 	};
 
 
-	function eliminarProducto(prod){
-	    $.ajax({
-	      type: "DELETE",
-	      url:"index.php?section=borrar_novedad&id=" + prod,
-	      success: function(data){
-						cargarContenedor("novedades-admin");
-	      },
-	      error: function(){
-	        alert("No anduvo la llamada AJAX");
-	      },
-	    });
-	  };
+	// function eliminarNovedad(novedad){
+	//     $.ajax({
+	//       type: "DELETE",
+	//       url:"index.php?section=borrar_novedad&id=" + novedad,
+	//       success: function(data){
+	// 					cargarContenedor("novedades-admin");
+	//       },
+	//       error: function(){
+	//         alert("No anduvo la llamada AJAX");
+	//       },
+	//     });
+	//   };
+	//
+	//   $(".eliminarNovedad").on("click", function(event){
+	//     event.preventDefault();
+	//     id_novedad=event.target.href;
+	//     var posbarra=id_novedad.lastIndexOf("/");
+	//     id_novedad = id_novedad.substr(posbarra+1);
+	//     eliminarNovedad(id_novedad);
+	//   });
 
-	  $(".eliminarNovedad").on("click", function(event){
-	    event.preventDefault();
-	    id_novedad=event.target.href;
-	    var posbarra=id_novedad.lastIndexOf("/");
-	    id_novedad = id_novedad.substr(posbarra+1);
-	    eliminarProducto(id_novedad);
-	  });
+
 
 });

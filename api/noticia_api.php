@@ -12,15 +12,37 @@ class NoticiaApi extends ApiBase {
 
   function noticia(){
     switch ($this->method) {
+
       case 'GET':
+      if(count($this->args) < 1){
         return $this->model->getNews();
+      }
+      else {
+        return $this->model->getFullNew($this->args[0]);
+      }
         break;
+
       case 'DELETE':
         if(count($this->args) > 0) return $this->model->deleteNew($this->args[0]);
         break;
+
       case 'POST':
-        if(isset($_POST['tarea'])) return $this->model->addNew($_POST['tarea']);
+      if(count($this->args) < 1){
+        if(isset($_POST['dropdown']) && isset($_POST['nuevoTitulo']) && isset($_POST['nuevaDescripcion']) && isset($_POST['nuevaNoticia']) && isset($_POST['nuevaDescripcion']) && isset($_FILES['nuevasImgsNoticia']))
+          {
+          return $this->model->addNew($_POST['dropdown'], $_POST['nuevoTitulo'], $_POST['nuevaDescripcion'], $_POST['nuevaNoticia'], $_FILES['nuevasImgsNoticia']);
+          }
+      }
+      else
+          {
+            return $this->model->addImgs($this->args[1], $_FILES['imagesToUpload2']);
+          }
         break;
+
+      case 'PUT':
+        if(count($this->args) > 0) return $this->model->updateNoticia($this->args[0], $this->data->nombre);
+        break;
+
       default:
             return 'Verbo no soportado';
         break;

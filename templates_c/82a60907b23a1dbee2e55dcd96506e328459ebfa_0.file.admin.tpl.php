@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-19 14:27:06
+<?php /* Smarty version 3.1.27, created on 2015-11-24 04:39:13
          compiled from "C:\Xampp\htdocs\fochoteco\templates\admin.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:10989564dce2a2eb235_73513465%%*/
+/*%%SmartyHeaderCode:3045653dbe19db474_32413071%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '82a60907b23a1dbee2e55dcd96506e328459ebfa' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\admin.tpl',
-      1 => 1447939623,
+      1 => 1448336352,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10989564dce2a2eb235_73513465',
+  'nocache_hash' => '3045653dbe19db474_32413071',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_564dce2a462294_89909039',
+  'unifunc' => 'content_5653dbe1a29685_18329851',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_564dce2a462294_89909039')) {
-function content_564dce2a462294_89909039 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5653dbe1a29685_18329851')) {
+function content_5653dbe1a29685_18329851 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '10989564dce2a2eb235_73513465';
+$_smarty_tpl->properties['nocache_hash'] = '3045653dbe19db474_32413071';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -43,7 +43,10 @@ $_smarty_tpl->properties['nocache_hash'] = '10989564dce2a2eb235_73513465';
       <input type="file"  id="imagesToUpload2" name="imagesToUpload2[]" multiple>
     </form>
 
-    <div id="contadmin" class="col-sm-6">
+    <div id="contadmin" class="col-sm-6 row admNews">
+      <ul id="contadmin1">
+
+      </ul>
 
     </div>
 
@@ -112,7 +115,7 @@ $_smarty_tpl->properties['nocache_hash'] = '10989564dce2a2eb235_73513465';
   </div>
 
 
-  <!-- Modal -->
+  <!-- Modal Categoria -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -121,6 +124,26 @@ $_smarty_tpl->properties['nocache_hash'] = '10989564dce2a2eb235_73513465';
           <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
         </div>
         <input id="nuevoNombreCat" name="nuevoNombreCat" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Noticia -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
+        </div>
+        <select id="dropdown" name="dropdown"><option value="0">Categorias</option><option value="1">Categorias1</option></select>
+        <h4>Titulo: </h4><input id="actualizarTitulo" name="actualizarTitulo" value="">
+        <h4>Descripcion: </h4><input id="actualizarDescripcion" name="actualizarDescripcion" value="">
+        <h4>Noticia: </h4><input id="actualizarNoticia" name="actualizarNoticia" value="">
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>

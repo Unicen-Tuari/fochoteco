@@ -17,7 +17,10 @@
       <input type="file"  id="imagesToUpload2" name="imagesToUpload2[]" multiple>
     </form>
 
-    <div id="contadmin" class="col-sm-6">
+    <div id="contadmin" class="col-sm-6 row admNews">
+      <ul id="contadmin1">
+
+      </ul>
 
     </div>
 
@@ -86,7 +89,7 @@
   </div>
 
 
-  <!-- Modal -->
+  <!-- Modal Categoria -->
   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -95,6 +98,26 @@
           <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
         </div>
         <input id="nuevoNombreCat" name="nuevoNombreCat" value="">
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Noticia -->
+  <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Nuevo nombre de la categoria:</h4>
+        </div>
+        <select id="dropdown" name="dropdown"><option value="0">Categorias</option><option value="1">Categorias1</option></select>
+        <h4>Titulo: </h4><input id="actualizarTitulo" name="actualizarTitulo" value="">
+        <h4>Descripcion: </h4><input id="actualizarDescripcion" name="actualizarDescripcion" value="">
+        <h4>Noticia: </h4><input id="actualizarNoticia" name="actualizarNoticia" value="">
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
           <button type="button" class="btn btn-primary" id="guardarNombreCat" name="guardarNombreCat" data-dismiss="modal">Guardar</button>

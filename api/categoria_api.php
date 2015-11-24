@@ -10,7 +10,7 @@ class CategoriaApi extends ApiBase {
     $this->model = new Categoria_model();
   }
 
-  function categorias(){
+  function categoria(){
     switch ($this->method) {
       case 'GET':
         if(count($this->args) < 1){

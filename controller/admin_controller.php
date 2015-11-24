@@ -1,5 +1,7 @@
 <?php
 
+REQUIRE_ONCE('controller/controller.php');
+
 class Admin_controller extends Controller {
 
   function mostrarDropdown()

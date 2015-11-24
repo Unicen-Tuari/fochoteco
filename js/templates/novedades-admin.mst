@@ -1,0 +1,17 @@
+<li class="list-group-item col-sm-12" id="novedad{{id_novedad}}">
+
+  <div class="col-sm-3">
+  <img src="{{imagenes}}" alt="{{imagenes}}" class="img-thumbnail"/>
+  <a class="glyphicon glyphicon-plus agregarImagenes" idNovImg="{{id_novedad}}"></a>
+  <a class="glyphicon glyphicon-trash eliminarNovedad" idNovEliminar="{{id_novedad}}"></a>
+  <a class="glyphicon glyphicon-edit actualizarNovedad" data-toggle="modal" data-target="#myModal2" idNovMod="{{id_novedad}}"></a>
+  </div>
+
+  <div class="col-sm-9">
+    <h6> Categoria: {{fk_id_categoria}} </h6>
+    <h3>{{titulo}}</h3>
+    {{descripcion}}
+    <button value={{id_novedad}} class="verNoticia"><h6> Ver noticia completa </h6></button>
+  </div>
+
+</li>

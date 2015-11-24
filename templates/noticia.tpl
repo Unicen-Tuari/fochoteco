@@ -9,14 +9,14 @@
            <h1>{$novedad['titulo']}</h2>
            {$novedad['noticia']}
 
-           {foreach $novedad['imagenes'] as $key => $imagen}
+           {foreach $novedad.imagenes as $key => $imagen}
            {if $key != 0}
            <div class="col-sm-4">
            <img src="{$imagen}" alt="{$imagen}" class="imgsNoticia"/>
            </div>
            {/if}
            {/foreach}
-           <h6>Fecha de publicacion: {$novedad['fecha_publicacion']}</h6>
+           <h6>Fecha de publicacion: {$novedad.fecha_publicacion}</h6>
         </div>
 
       </div>

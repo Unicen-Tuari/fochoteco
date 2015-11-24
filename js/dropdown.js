@@ -11,7 +11,7 @@ $("#formAgregarCategoria").submit(function(event){
 		$.ajax(
 	    {
 	      method: "POST",
-	      url: "api/categorias",
+	      url: "api/categoria",
 	      data: { categoria: nombreCategoria }
 	    })
 	  .done(function(idCategoria) {
@@ -48,7 +48,7 @@ function crearDropdown(categoria){
 }
 
 function cargarCategorias(){
-  $.ajax( "api/categorias" )
+  $.ajax( "api/categoria" )
   .done(function(categoriasJSN) {
     for(var key in categoriasJSN) {
       crearCategoria(categoriasJSN[key]);
@@ -57,7 +57,6 @@ function cargarCategorias(){
   })
   .fail(function() {
 			alert("error");
-      // $('#listaTareas').append('<li>Imposible cargar la lista de tareas</li>');
   });
 }
 
@@ -65,14 +64,14 @@ function borrarCategoria(idCategoria){
   $.ajax(
     {
       method: "DELETE",
-      url: "api/categorias/" + idCategoria
+      url: "api/categoria/" + idCategoria
     })
   .done(function() {
      $('#categoria'+idCategoria).remove();
 	    $('#drop'+idCategoria).remove();
   })
   .fail(function() {
-      alert('Imposible borrar la tarea');
+      alert('Imposible borrar la categoria');
   });
 }
 
@@ -88,12 +87,13 @@ function actualizarCategoria(idCategoria, name){
   $.ajax(
     {
       method: "PUT",
-      url: "api/categorias/" + idCategoria,
+      url: "api/categoria/" + idCategoria,
 			dataType: 'json',
 			data: JSON.stringify(categoria)
     })
   .done(function() {
 		$('#nombre'+idCategoria).html("Nombre categoria: "+name);
+		$('#drop'+idCategoria).html(name);
   })
   .fail(function() {
       alert('Imposible realizar la tarea');
@@ -103,7 +103,7 @@ function actualizarCategoria(idCategoria, name){
 $('body').on('click', 'a.actualizarCategoria', function() {
 	event.preventDefault();
 	idCateg = this.getAttribute('idcatmod');
-	$.ajax( "api/categorias/"+idCateg )
+	$.ajax( "api/categoria/"+idCateg )
 	    .done(function(nombreCat) {
 				$('#nuevoNombreCat').val(nombreCat);
 	    })

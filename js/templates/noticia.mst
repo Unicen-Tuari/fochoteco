@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="fullNew col-sm-offset-1 col-sm-10">
+        <div class="col-sm-offset-1 col-sm-10">
+          <div class="col-sm-2">
+          <img src="{{imagenes.0.ruta}}" alt="{{imagenes[0]}}" class="img-thumbnail"/>
+          </div>
+
+           <h1>{{titulo}}</h2>
+           {{noticia}}
+
+           <div id="imgsNovedad"> </div>
+           <h6>Fecha de publicacion: {{fecha_publicacion}}</h6>
+        </div>
+
+      </div>
+  </div>
+</div>

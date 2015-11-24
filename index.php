@@ -13,19 +13,15 @@ if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 }
 else {
 		switch($_REQUEST[ConfigApp::$SECTION]){
-			case ConfigApp::$AGREGAR_IMAGENES:
-      // Agrega imagenes a una noticia
-				$adm_controller->agregarImagenes();
-				break;
+			// case ConfigApp::$AGREGAR_IMAGENES:
+      // // Agrega imagenes a una noticia
+			// 	$adm_controller->agregarImagenes();
+			// 	break;
 
-			case ConfigApp::$BORRAR_NOVEDAD:
-				$adm_controller->borrarNovedad();
-				break;
-
-      case ConfigApp::$NOVEDADES_ADMIN:
-			// Carga las novedades en el panel de admin
-				$controlador->mostrarNovedades();
-				break;
+      // case ConfigApp::$NOVEDADES_ADMIN:
+			// // Carga las novedades en el panel de admin
+			// 	$controlador->mostrarNovedades();
+			// 	break;
 
       case ConfigApp::$NOVEDADES:
       // Carga las novedades en la pagina
@@ -37,10 +33,10 @@ else {
         $controlador->mostrarNoticia();
         break;
 
-      case ConfigApp::$AGREGAR_NOTICIA:
-      // Agrega una nueva noticia a la DB
-        $adm_controller->agregarNuevaNoticia();
-        break;
+      // case ConfigApp::$AGREGAR_NOTICIA:
+      // // Agrega una nueva noticia a la DB
+      //   $adm_controller->agregarNuevaNoticia();
+      //   break;
 
       case ConfigApp::$ADMIN || ConfigApp::$SECTION_HOME:
       // Carga el tempalte de admin o el home de la pagina

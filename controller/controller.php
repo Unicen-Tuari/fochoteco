@@ -1,6 +1,7 @@
 <?php
 
 REQUIRE_ONCE('view/view.php');
+REQUIRE_ONCE('config/config_app.php');
 REQUIRE_ONCE('model/model.php');
 REQUIRE_ONCE('model/categoria_model.php');
 REQUIRE_ONCE('model/novedad_model.php');
