@@ -19,6 +19,7 @@ REQUIRE_ONCE('model/novedad_model.php');
 				$this->nov_model = new Novedad_model();
 			}
 
+
 			function showSection($section)
 	    {
 				$this->view->showTemplate($section);
@@ -26,8 +27,16 @@ REQUIRE_ONCE('model/novedad_model.php');
 
 			function mostrarNovedades()
 			{
-	    $this->view->showNews($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getNews());
-	  	}
+				if (isset($_REQUEST['id'])){
+					$this->view->showNews($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getNews($_REQUEST['id']), $this->cat_model->getCategories());
+				}
+				elseif ($_REQUEST[ConfigApp::$SECTION] == 'admin'){
+					$this->view->showNews($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getNews());
+	  		}
+				else {
+					$this->view->showNews($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getNews(), $this->cat_model->getCategories());
+				}
+			}
 
 			function mostrarNoticia()
 			{

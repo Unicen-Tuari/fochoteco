@@ -18,9 +18,16 @@ REQUIRE_ONCE ('libs/Smarty.class.php');
       $this->smarty->display($section .'.tpl');
     }
 
-    function showNews($section, $novedades)
+    function showTemplate2($section, $usuario)
+    {
+      $this->smarty->assign("usuario", $usuario);
+      $this->smarty->display($section .'.tpl');
+    }
+
+    function showNews($section, $novedades, $categorias)
     {
       $this->smarty->assign("novedades", $novedades);
+      $this->smarty->assign("categorias", $categorias);
       $this->smarty->display($section .'.tpl');
     }
 

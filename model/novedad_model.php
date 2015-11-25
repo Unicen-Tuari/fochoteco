@@ -6,10 +6,16 @@ class Novedad_model extends Model {
 
   private $novedades;
 
-  function getNews(){
+  function getNews($id_cat = 0){
     $novedades = array();
-    $consulta = $this->db->prepare("SELECT * FROM novedad");
-    $consulta->execute();
+    if ($id_cat) {
+      $consulta = $this->db->prepare("SELECT * FROM novedad WHERE fk_id_categoria =?");
+      $consulta->execute(array($id_cat));
+    }
+    else {
+      $consulta = $this->db->prepare("SELECT * FROM novedad");
+      $consulta->execute();
+    }
     //Todas las novedades
     while($novedad = $consulta->fetch(PDO::FETCH_ASSOC)) {
       $consultaCategoria = $this->db->prepare("SELECT nombre_categoria FROM categoria WHERE id_categoria=?");
@@ -39,7 +45,7 @@ class Novedad_model extends Model {
     $novedad['id_categ'] = $novedad['fk_id_categoria']; //para el dropdown2
     $novedad['fk_id_categoria'] = $nombreCategoria["nombre_categoria"];
 
-    $consultaImagen = $this->db->prepare("SELECT * FROM imagen WHERE fk_id_novedad=?");
+    $consultaImagen = $this->db->prepare("SELECT ruta, id_imagen FROM imagen WHERE fk_id_novedad=?");
     $consultaImagen->execute(array($id));
     while($imagen = $consultaImagen->fetch(PDO::FETCH_ASSOC)) {
       $novedad['imagenes'][] = $imagen;

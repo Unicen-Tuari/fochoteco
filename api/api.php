@@ -3,6 +3,15 @@
 require_once 'categoria_api.php';
 require_once 'noticia_api.php';
 
+session_start();
+if(isset($_SESSION['tiempo']) ) {
+$tiempo_sesion = time() - $_SESSION['tiempo'];
+    if($tiempo_sesion > 600)
+    {
+        session_destroy();
+    }
+}
+if (isset($_SESSION['email'])){
 $url_elements = explode('/', rtrim($_REQUEST['parametros'], '/'));
 if(count($url_elements)>0){
   $api_name = ucfirst($url_elements[0]) . 'Api';
@@ -14,5 +23,8 @@ if(count($url_elements)>0){
 }
 
 echo "No endpoint ".$url_elements[0];
-
+}
+else {
+  echo  "Expiro el tiempo de la sesion";
+}
  ?>

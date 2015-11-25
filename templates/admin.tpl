@@ -13,9 +13,15 @@
 
   <body id="bodyhome">
 
+  <div class="col-sm-12">
+    <div class="col-xs-1">
     <form id="imgAjax">
       <input type="file"  id="imagesToUpload2" name="imagesToUpload2[]" multiple>
     </form>
+    </div>
+      <span class="pull-right">Hola <strong>{$usuario}</strong>! <a href="index.php?section=logout">Logout</a></span>
+  </div>
+
 
     <div id="contadmin" class="col-sm-6 row admNews">
       <ul id="contadmin1">

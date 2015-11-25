@@ -1,11 +1,11 @@
 <?php
 
+REQUIRE_ONCE('config/config_app.php');
 REQUIRE_ONCE('controller/controller.php');
 REQUIRE_ONCE('controller/admin_controller.php');
-REQUIRE_ONCE('config/config_app.php');
+REQUIRE_ONCE('controller/login_controller.php');
 
 $controlador = new Controller();
-$adm_controller = new Admin_controller();
 
 if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 {
@@ -13,15 +13,6 @@ if(!array_key_exists(ConfigApp::$SECTION,$_REQUEST))
 }
 else {
 		switch($_REQUEST[ConfigApp::$SECTION]){
-			// case ConfigApp::$AGREGAR_IMAGENES:
-      // // Agrega imagenes a una noticia
-			// 	$adm_controller->agregarImagenes();
-			// 	break;
-
-      // case ConfigApp::$NOVEDADES_ADMIN:
-			// // Carga las novedades en el panel de admin
-			// 	$controlador->mostrarNovedades();
-			// 	break;
 
       case ConfigApp::$NOVEDADES:
       // Carga las novedades en la pagina
@@ -33,19 +24,26 @@ else {
         $controlador->mostrarNoticia();
         break;
 
-      // case ConfigApp::$AGREGAR_NOTICIA:
-      // // Agrega una nueva noticia a la DB
-      //   $adm_controller->agregarNuevaNoticia();
-      //   break;
+      case ConfigApp::$ACTION_LOGIN:
+        $loginController = new LoginController();
+        $loginController->login();
+        break;
 
-      case ConfigApp::$ADMIN || ConfigApp::$SECTION_HOME:
-      // Carga el tempalte de admin o el home de la pagina
-        $controlador->showSection($_REQUEST[ConfigApp::$SECTION]); //NO ME ANDA AGARRANDO PARAM DESDE CONTROLLER.
+      case ConfigApp::$ACTION_LOGOUT:
+        $loginController = new LoginController();
+        $loginController->logout();
+        break;
+
+      case  ConfigApp::$ADMIN:
+      // Carga el tempalte admin de la pagina
+        $adm_controller = new Admin_controller();
+        $adm_controller->mostrarAdmin();
         break;
 
       default:
-        echo 'Pagina no encontrada';
+        $controlador->showSection($_REQUEST[ConfigApp::$SECTION]);
         break;
+
       }
   }
 

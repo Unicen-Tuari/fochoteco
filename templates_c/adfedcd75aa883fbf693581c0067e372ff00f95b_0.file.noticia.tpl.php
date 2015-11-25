@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-11-23 19:53:48
+<?php /* Smarty version 3.1.27, created on 2015-11-25 15:34:03
          compiled from "C:\Xampp\htdocs\fochoteco\templates\noticia.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:17513565360bcb1b826_93381856%%*/
+/*%%SmartyHeaderCode:8675655c6db409f78_32764645%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'adfedcd75aa883fbf693581c0067e372ff00f95b' => 
     array (
       0 => 'C:\\Xampp\\htdocs\\fochoteco\\templates\\noticia.tpl',
-      1 => 1447952379,
+      1 => 1448389225,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '17513565360bcb1b826_93381856',
+  'nocache_hash' => '8675655c6db409f78_32764645',
   'variables' => 
   array (
     'novedad' => 0,
@@ -22,22 +22,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_565360bcba8247_10400273',
+  'unifunc' => 'content_5655c6db4dcea9_18524571',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_565360bcba8247_10400273')) {
-function content_565360bcba8247_10400273 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5655c6db4dcea9_18524571')) {
+function content_5655c6db4dcea9_18524571 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '17513565360bcb1b826_93381856';
+$_smarty_tpl->properties['nocache_hash'] = '8675655c6db409f78_32764645';
 ?>
 <div class="container-fluid">
   <div class="row">
     <div class="fullNew col-sm-offset-1 col-sm-10">
         <div class="col-sm-offset-1 col-sm-10">
           <div class="col-sm-2">
-          <img src="<?php echo $_smarty_tpl->tpl_vars['novedad']->value['imagenes'][0];?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['novedad']->value['imagenes'][0];?>
-" class="img-thumbnail"/>
+          <img src='<?php echo $_smarty_tpl->tpl_vars['novedad']->value["imagenes"][0]["ruta"];?>
+' alt='<?php echo $_smarty_tpl->tpl_vars['novedad']->value["imagenes"][0]["ruta"];?>
+' class="img-thumbnail"/>
           </div>
 
            <h1><?php echo $_smarty_tpl->tpl_vars['novedad']->value['titulo'];?>
@@ -59,9 +59,9 @@ $foreach_imagen_Sav = $_smarty_tpl->tpl_vars['imagen'];
 ?>
            <?php if ($_smarty_tpl->tpl_vars['key']->value != 0) {?>
            <div class="col-sm-4">
-           <img src="<?php echo $_smarty_tpl->tpl_vars['imagen']->value;?>
-" alt="<?php echo $_smarty_tpl->tpl_vars['imagen']->value;?>
-" class="imgsNoticia"/>
+           <img src='<?php echo $_smarty_tpl->tpl_vars['imagen']->value["ruta"];?>
+' alt='<?php echo $_smarty_tpl->tpl_vars['imagen']->value["ruta"];?>
+' class="imgsNoticia"/>
            </div>
            <?php }?>
            <?php

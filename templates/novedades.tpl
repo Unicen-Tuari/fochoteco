@@ -1,8 +1,17 @@
 <div class="container-fluid">
   <div class="row allNews">
+    <select id="dropdownFiltro" name="dropdownFiltro">
+      {if $categorias}
+        <option value="0">Todas las categorias</option>
+        {foreach $categorias as $categoria}
+        <option value="{$categoria.id_categoria}">{$categoria.nombre_categoria}</option>
+        {/foreach}
+      {else}
+        <option value="0">No existen categorias</option>
+      {/if}
+    </select>
       <ul>
         {foreach $novedades as $novedad}
-
         <li class="list-group-item col-sm-offset-1 col-sm-10 individualNew">
           {foreach $novedad['imagenes'] as $imagen}
             <div class="col-sm-2">

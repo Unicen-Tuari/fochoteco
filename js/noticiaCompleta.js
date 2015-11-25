@@ -73,28 +73,26 @@ $('document').ready(function(){
 		});
 	};
 
+	function cargarNoticiasFiltro(id_cat){
+		$.ajax({
+			type: 'GET',
+			dataType: 'HTML',
+			url: 'index.php?section=novedades&id='+id_cat,
+			success: function(data){
+						$('#conthome').html(data);
+						$('#dropdownFiltro').val(id_cat);
+					},
+			error: function(){
+						alert('Error');
+					}
+		});
+	};
 
-	// function eliminarNovedad(novedad){
-	//     $.ajax({
-	//       type: "DELETE",
-	//       url:"index.php?section=borrar_novedad&id=" + novedad,
-	//       success: function(data){
-	// 					cargarContenedor("novedades-admin");
-	//       },
-	//       error: function(){
-	//         alert("No anduvo la llamada AJAX");
-	//       },
-	//     });
-	//   };
-	//
-	//   $(".eliminarNovedad").on("click", function(event){
-	//     event.preventDefault();
-	//     id_novedad=event.target.href;
-	//     var posbarra=id_novedad.lastIndexOf("/");
-	//     id_novedad = id_novedad.substr(posbarra+1);
-	//     eliminarNovedad(id_novedad);
-	//   });
-
+	$("#dropdownFiltro").on("change", function(event){
+		event.preventDefault();
+		var id_cat = $("#dropdownFiltro").val();
+		cargarNoticiasFiltro(id_cat);
+	});
 
 
 });
