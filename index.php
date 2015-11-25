@@ -34,6 +34,10 @@ else {
         $loginController->logout();
         break;
 
+      case ConfigApp::$ENVIAR_MAIL:
+        $controlador->mandarMail();
+        break;
+
       case  ConfigApp::$ADMIN:
       // Carga el tempalte admin de la pagina
         $adm_controller = new Admin_controller();

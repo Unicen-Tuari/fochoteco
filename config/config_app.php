@@ -20,6 +20,9 @@ class ConfigApp
   //LOGIN
   public static $ACTION_LOGIN = 'login';
   public static $ACTION_LOGOUT = 'logout';
+
+  //mail
+  public static $ENVIAR_MAIL = 'enviar-mail';
 }
 
 ?>

@@ -5,6 +5,7 @@ REQUIRE_ONCE('config/config_app.php');
 REQUIRE_ONCE('model/model.php');
 REQUIRE_ONCE('model/categoria_model.php');
 REQUIRE_ONCE('model/novedad_model.php');
+REQUIRE_ONCE('model/contacto_model.php');
 
 	class Controller
   {
@@ -42,6 +43,14 @@ REQUIRE_ONCE('model/novedad_model.php');
 			{
 	    $this->view->showFullNew($_REQUEST[ConfigApp::$SECTION], $this->nov_model->getFullNew($_REQUEST['id']));
 	  	}
+
+			function mandarMail()
+			{
+				$contacto_model = new ContactoModel();
+				print_r($_REQUEST);
+				$contacto_model->enviarEmail($_REQUEST["email"], $_REQUEST["subject"], $_REQUEST["message"]);
+			}
 	}
+
 
 ?>

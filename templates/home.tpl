@@ -8,6 +8,7 @@
     <title>Lima & Limón</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/login.css">
   </head>
 
 
@@ -35,6 +36,7 @@
         </ul>
 
         <ul class="nav navbar-nav navbar-right">
+          <li id="navAdmin"><a href="#">asd</a></li>
           <li id="contacto"><a href="#"> CONTACTO  </a></li>
           <!-- <li id="dados"><a href="">DADOS</a></li> -->
         </ul>

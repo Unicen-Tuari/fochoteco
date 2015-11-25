@@ -9,20 +9,20 @@
     </div>
     <div class="row contacto">
       <div class="col-md-offset-5 col-md-3 formcontacto" id="ocultarform">
-        <div class="form-group">
+        <form class="form-group" id="enviarMail">
           <br><br>
           <h3> ESCRIBINOS TU CONSULTA </h3>
           <br><br>
           <label>Su nombre (requerido)</label>
-          <input type="text" class="form-control" placeholder="Jane Doe"><br>
+          <input type="text" class="form-control" id="nombreMail" placeholder="Jane Doe"><br>
           <label>Su e-mail (requerido)</label>
-          <input type="email" class="form-control" placeholder="Email"><br>
+          <input type="email" class="form-control" id="correoMail" placeholder="Email"><br>
           <label>Asunto</label>
-          <input type="text" class="form-control" placeholder=""><br>
+          <input type="text" class="form-control" id="asuntoMail" placeholder=""><br>
           <label>Mensaje</label>
-          <textarea class="form-control" rows="5"></textarea><br>
-          <button type="button" class="btn btn-default btn-send">ENVIAR</button>
-        </div>
+          <textarea class="form-control" id="mensajeMail" rows="5"></textarea><br>
+          <button type="submit" class="btn btn-default btn-send">ENVIAR</button>
+        </form>
       </div>
       <div class="col-md-offset-8 col-md-4 formcontacto2">
         <br><br><h1> CONTACTANOS! </h3><br><br>

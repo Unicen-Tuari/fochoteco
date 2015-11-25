@@ -36,7 +36,7 @@ class LoginController {
         die();
       }
       else {
-        // $this->view->mostrarError("Usuario y password invalidos");
+        header("Location: index.php");
       }
     }
 
